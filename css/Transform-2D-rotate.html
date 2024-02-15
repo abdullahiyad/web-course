@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+        /* Transform 
+        This property using for doing a changes on the element ,
+        there's methods we used i transform :
+        [1] scale() : this method not just increase the width and heigh of the element , but all thigs insdie the element will stretch
+        [2] rotate() : this method using to rotate the element 
+        */
+        /*  
+        transform Rotate values :
+        [1] Degree (deg)    => transform : rotate(360 deg) ;  => 1 Turn = 360 deg
+        [2] Radians (rad)   => transform : rotate(6.28 rad) ; => 1 Turn = 6.28 rad
+        [3] Gradians (grad) => transform : rotate(400 grad) ; => 1 Turn = 400 grad
+        [4] Turn (turn)     => transform : rotate(1 turn) ;   => 1 Turn = 1 turn
+       ``# note : rotate take a positive and negative value , 
+          if we write a positive value then the element will rotate with clockwise , and if we give the rotate negative value will rotate in opposite clockwise 
+        */
+        div {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255 0 0 / 39%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            transform: rotate(45deg);
+            transform: rotate(1turn);
+            transform: rotate(0.5turn);
+            transform: rotate(0.25turn);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Transform</div>
+</body>
+
+</html>

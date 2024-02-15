@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display type </title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        div {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        span {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            /* display: block; */
+            display: block;
+        }
+
+        /* using display property you can exchage the element from block to inline or inline block */
+        .hide {
+            display: none;
+            /* when you want to hide element just write display and give him value none*/
+        }
+
+        .vis {
+            visibility: hidden;
+        }
+
+        /* 
+        الفرق بين visibility:hidden  and display: none
+        الفيزابليتي هيدين بخفي العنصر بس مكانه بضل محجوز بالصفحه وما رح يجي مكانه عنصراخر او فوقه
+        الديسبلاي ناان بختفي العنصر وبختفي مكانه كمان
+        */
+    </style>
+</head>
+<!-- 
+    1-block
+        -block element take all page width if you dont give him width
+        -block element adding break line before and after him
+        -Respect padding and margin , width ,height
+        -example of block element: div element
+    
+    2-inline
+        -block element dont take all page width if you dont give him width
+        -inline element dont adding break line before and after him
+        -dont respect width and height
+        -respect padding and margin just from left and right, dont respect padding and margin from top or bottom
+        -example of iniline element : span element
+
+    3-inline-block : its like a mix of inline and block
+        -Allow element before and after him
+        -respect padding and margin and width and height
+        -
+ -->
+
+<body>
+    <!-- block element -->
+
+    <div>block1</div>
+    <div>block2</div>
+    <div>block3</div>
+
+    <span>inline 1</span>
+    <span>inline 2</span>
+    <span>inline 3</span>
+
+    <div class="hide">hi</div>
+    <div class="vis">hi</div>
+
+
+</body>
+
+</html>

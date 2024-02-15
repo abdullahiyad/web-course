@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* we want to change the style of first letter in paragraph to white color 
+        and his background to red color and change font size  */
+        /* solution:
+        in past we just put a span around the first letter and styling them
+        */
+        .one span {
+            background-color: red;
+            color: white;
+            font-size: 25px;
+        }
+
+        /* what if we want to do that whithout using any html element || or if i dont have access to change in html file? */
+        /* solution: we can use pseudo elements */
+        .two::first-letter {
+            background-color: red;
+            color: white;
+            font-size: 25px;
+        }
+
+        /* what if we want to styling the first line? */
+        .three::first-line {
+            color: blue;
+            font-weight: bold
+        }
+
+        /* what if i want to change the background and the color of paragrph four when i seleced the text */
+        .four::selection {
+            background-color: black;
+            color: yellow;
+        }
+
+        /* if we want that for all text in page  */
+        ::selection {
+            background-color: ;
+            color: ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p class="one"><span>L</span>orem ipsum dolor sit amet consectetur, adipisicing elit. Neque, sint reprehenderit
+        ipsam reiciendis iusto, magni praesentium quasi ex rerum eos beatae obcaecati voluptatum saepe quo laboriosam
+        dolor. Fuga, adipisci magni.</p>
+    <hr>
+    <p class="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quos deleniti, dignissimos
+        quis quae fugit odit architecto mollitia magnam aperiam nam, beatae corporis perferendis at ipsa reiciendis
+        laboriosam labore tempore?</p>
+    <hr>
+    <p class="three">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam ipsa nihil sint cupiditate
+        accusantium perspiciatis repellat molestiae ratione, non unde doloribus ut delectus molestias quas inventore
+        consequuntur aliquid harum ducimus?</p>
+    <hr>
+    <p class="four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, blanditiis quasi commodi ad officiis
+        rerum delectus voluptates quam molestiae inventore nulla ipsum cumque ex excepturi libero quas dolor
+        perspiciatis quaerat!</p>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating</title>
+    <style>
+        div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: #eee;
+            float: left;
+            width: calc((100% - 50px)/4);
+            margin-left: 10px;
+            /* ====example=======
+            if i want to add 5 spaces
+            the width of every space is 1% => the total width is 5% from conter width
+            => 95% availabel space from sceen that will be the width of 4 elements
+            4 elements width: 95%/4 =23.75%
+            every element width=23.75%
+            ====================================
+            but this is manual calculating 
+            so insted of using calculater and calculate every thing 
+            we can just use function calc(04%/4)
+            =====================
+            and calculate function can dealing with pixels 
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+</body>
+
+</html>

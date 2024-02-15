@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z index</title>
+    <style>
+        div {
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            position: absolute;
+        }
+
+        .one {
+            background-color: red;
+            z-index: 2;
+        }
+
+        .two {
+            background-color: blue;
+            left: 20px;
+            top: 20px;
+            z-index: 3;
+        }
+
+        .three {
+            background-color: green;
+            left: 40px;
+            top: 35px;
+        }
+
+        /* ====z-index==== */
+        /* 
+        important noe: z-index doesn't work without position
+        المقصود من هذه الحاصيه هو تحديد الطبقات واي عنصر ياتي فوق العنصر الاخر 
+        العنصر صاحب القيمه الاكبر هو الذي يطغى فوق العناصر الاخرى
+        */
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        one
+    </div>
+    <div class="two">
+        two
+    </div>
+    <div class="three">
+        three
+    </div>
+</body>
+
+</html>

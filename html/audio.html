@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <!-- 
+        audio attribute
+        1-src: to write the source path of audio file
+        2-controls : to show the controls buttons 
+        3-autoplay : the audio will automatic play when you visite the page ,
+         note : this attribute not working if you used google chrome becuase they block it 
+        4-muted: the audio will be muted when you visit the page
+        5-loop : will be replayed the audio 
+        6-preload : the browser will load the audio when the page is loading , راح يحمل الصوت وهي الصفحه تحمل عشان ما يصير تقطيع 
+
+        note: you can write a text inside the audio tag , 
+        and this text will show if there error in path or file not found or if the browser dont support the type of audio.
+     -->
+    <audio src="">
+
+    </audio>
+
+    <audio >
+        <source src="" type="">
+        <source src="" type="">
+    </audio>
+    <!-- there is two ways to write the source path of audio 
+        1- src : wirte this attribute inside the audio tag , like the first way written up 
+        2- using source tag <source src="" type="">    </source> 
+    -->
+    <audio src="../audio/mode.mp3" controls loop  muted>
+        sorry , your browser dont support the type of audio.
+    </audio>
+    <br>
+    <hr>
+    <br>
+    <audio controls preload="auto">
+        <source src="../audio/mode.mp3" type="audio/mpeg">
+        <source src="../audio/mode.ogg" type="audio/ogg">
+         <!-- 
+            to know the mini type of audio write on google "what the mini type of ..... "
+            
+            what is the fesablity of write more than one source file , and diffrent type ? 
+            because if the browser dont support the first type he will try the other types 
+          -->
+    </audio>
+</body>
+</html>

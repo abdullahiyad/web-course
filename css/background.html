@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        .test {
+            /* we can change background color using css  */
+            /* to determine the color we can use 3 ways:
+            
+            1-write the name of color : like black , red , blue 
+            2-using hashtage sign with hexa code of color we can get from google
+            3-using rgb(red,green,blue) function , every varible take number from 0-255 
+            4-using rgba(red,green,blue,alpha%) function , like the previus function but the alpha take persantge 
+            */
+
+            /* 
+            background-color: black;
+            background-color:#ff0011;
+            background-color: rgb(200, 155, 100);
+            background-color: rgba(200, 155, 100, 75%);
+             */
+
+            /*we can set image like a background */
+            color: ;
+            background-image: url(../image/catasters.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-attachment
+            هذه الخاصيه المسؤوله عن موقع الصوره عندما تنزل او تصعد بالصفحه
+            هل  ستبقى الصوره ثابته مع المحتوى ام تتحرك
+            scroll: its the default value  , the image will be pin under the content and when you scroll down will disaper
+            fixed: the image will be fixed and stay even if you scroll down or up the image background will not scrolled with content
+            */
+
+
+
+            background-position: left;
+            background-position: right bottom;
+            background-position: 20px 50px;
+            background-position: 30% 20%;
+            /* background-positoin
+            to determine the position of background image
+            we have 9 position
+            left top        center top          right top
+
+            left center     center center       right center
+
+            left bottom     center bottom       right bottom
+
+            if we write just one value the default value of the other value is center
+            so when i write background-position: left; ->its mean left center
+
+            or we can using pexial position
+            background-position:x-position y-position;
+
+            or using percentage
+            background-position: x% y%;
+            */
+
+
+            background-size: auto;
+            /* background-size
+            change the size of background image 
+            1-auto:the default value
+            2-cover: the image will cover all content 
+            قد يقوم النظام بقطع جزء من الصوره لكي تتناسب مع المحتوى وقد لا تظهر الصوره كلها
+            3-contain : the image will be all inside the bord
+            تكون الصوره كلها ظاهره ولا يتم قطع جزء منها
+
+            or we can using pixel 
+            background-size: width height;
+            background-size: 100px 50px;
+
+            or using percentage 
+            background-size: 20% 50%;
+            */
+
+
+
+
+
+            background-repeat: no-repeat;
+            /* this for stop repeating the image and just display it once time */
+            background-repeat: repeat-x;
+            /* that will repeat the image in row side */
+            background-repeat: repeat-y;
+            /* that will repeat the image in column side */
+            background-attachment: scroll;
+            /* in this attribute the image will be pin in the top of web page and not moving when you doing scroll */
+            background-attachment: fixed;
+            /* in this value the image will move with you when you doing scroll for the page  */
+            background-position: left top;
+            background-position: 200px 100px;
+            background-position: 50% 40%;
+            /* in this attribute you chose the position of the image three ways ,
+     the first way it by words like (left, right, center , top , bottom 
+     the other way is by numebr of pixels,
+     and the last way is using  persentage (%)   */
+            background-position-x: center;
+            background-position-y: center;
+            /*  */
+            background-size: cover;
+            /* هذه الخاصيه تقوم بتكبير الصوره لتعبء المحتوى وقد يتم قطع جزء من الشاشه لتلائم المحتوى */
+            background-size: contain;
+            /* هذه الخاصيه تشبه الخاصيه السابقه ولكن هذه الخاصيه لا يتم قطع جزء من الصوره لتلائم المحتوى بل توضع كما هي لتعبئ الشاشه */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test">
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>for more information </p>
+
+        <a
+            href="https://www.youtube.com/watch?v=8sooTBY5C4w&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=6&ab_channel=ElzeroWebSchool">
+            click</a>
+    </div>
+</body>
+
+</html>

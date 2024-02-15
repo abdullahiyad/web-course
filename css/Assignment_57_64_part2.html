@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #ddd;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: repeat(4, 25%);
+            gap: 10px;
+            width: 80%;
+            margin: auto;
+
+        }
+
+        div {
+            background-color: white;
+            color: black;
+            border-bottom: 2px solid orangered;
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        div::before {
+            content: "\"";
+            position: absolute;
+            color: gray;
+            font-size: 40px;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            bottom: -20px;
+            right: 10px;
+        }
+
+        .job {
+            color: #aaa;
+        }
+
+        b,
+        p {
+            font-size: 13px;
+            padding: 10px;
+        }
+
+        .one-white {
+            grid-column: span 2;
+
+        }
+
+        .two-white {}
+
+        .three-black {
+            background-color: black;
+            color: white;
+            grid-area: span 3;
+        }
+
+        .four-white {
+            grid-row: span 2;
+        }
+
+        .five-black {
+            background-color: black;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .six-white {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="two-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="three-black">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="four-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="five-black">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="six-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="seven-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="eight-black">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="nine-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <div class="ten-white">
+        <h4>Osama Mohammed</h4>
+        <h6 class="job">Full-Stack Developer</h6>
+        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure impedit neque ea repellendus iste iusto
+            maiores ducimus omnis! Earum necessitatibus ad nulla perspiciatis alias in excepturi exercitationem harum
+            vitae hic!</b>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto porro aut molestias perferendis
+            dignissimos distinctio suscipit est doloremque saepe voluptatum repellendus, maxime numquam eveniet nihil,
+            quibusdam ratione, at odio?</p>
+    </div>
+    <br>
+    <br>
+</body>
+
+</html>

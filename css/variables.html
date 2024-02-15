@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <style>
+        /* ====== CSS Variables ===== */
+        /* There is two type of variables in CSS :
+        [1] Global Variables
+        [2] Local Variables
+        */
+
+        /* 
+        Variables Rules:
+        [1] Gloabal Variables Written inside :root class 
+        [2] Variables Name Start With Two Dashes [--Name]
+        [3] The Name of Variables Should be Meaningful
+        [4] The Name of Variables is Casesensitive
+        [5] To using the Variables we should using var() function , var function taking 2 argument2
+                var(variables Name , Fallback value)
+                Fallback Values:its optional , its the reserve value , and will display if the value get any error
+        [6] Local Variables written inside the css you want to make a variable for it, like in test class
+        [7] Local Variables can access just inside the class you creat in
+        */
+        :root {
+            --mainColor: rgb(234, 172, 71);
+            --mainPadding: 20px;
+        }
+
+        div,
+        h1,
+        p,
+        a {
+            display: block;
+            font-size: 40px;
+            padding: var(--mainPadding);
+        }
+
+        div {
+            background-color: var(--mainColor, black);
+            color: white;
+        }
+
+        h1 {
+            color: var(--mainColor, black);
+            background-color: #ddd;
+        }
+
+        p {
+            color: var(--mainColor, black);
+            border: 3px solid var(--mainColor, black);
+            padding: calc(10px + var(--mainPadding));
+        }
+
+        a:hover {
+            color: var(--mainColor, black);
+        }
+
+        .test {
+            --mainColor: green;
+            color: white;
+            background-color: var(--mainColor);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Main Div</div>
+    <h1>Main Title</h1>
+    <p>Main Text</p>
+    <a href="#">Main Link</a>
+    <div class="test">Test Div</div>
+</body>
+
+</html>

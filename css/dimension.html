@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimension</title>
+    <style>
+        div {
+            background-color: brown;
+            color: white;
+            padding: 15px;
+            display: inline-block;
+            /* until here the width fits to size of content */
+            min-width: 400px;
+            /* here the min width will be 400 pixel and can extend if the content need more width */
+            max-width: 400px;
+            /* here the width will fit with the size of content even 400px , he cannot extend more than 400px and he will take new line  */
+            min-height: 40px;
+            max-height: 400px;
+            /* as same as we doing in width */
+            width: fit-content;
+            /* this property will set the width as the content need */
+            height: fit-content;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>abdullah iyad </div>
+    <hr>
+    <div>abdullah iyad mohammed </div>
+    <hr>
+    <div>abdullah iyad mohammed qarqousheyya</div>
+    <hr>
+
+</body>
+
+</html>

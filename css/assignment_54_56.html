@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .part1 div {
+            width: 600px;
+            margin: auto;
+            text-align: center;
+            padding: 30px;
+            background-color: #ddd;
+            font-size: 30px;
+            border-left: 10px solid orangered;
+            border-right: 10px solid purple;
+            position: relative;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .part1 div::first-letter {
+            color: orangered;
+        }
+
+        .part1 div::before {
+            content: "";
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            left: 0px;
+            top: 0;
+            background-image: linear-gradient(to right,
+                    orangered 0%,
+                    orangered 20%,
+                    skyblue 20%,
+                    skyblue 40%,
+                    green 40%,
+                    green 60%,
+                    pink 60%,
+                    pink 80%,
+                    purple 80%);
+        }
+
+        .part1 div::after {
+            content: "";
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            background-image: linear-gradient(to right,
+                    orangered 0%,
+                    orangered 20%,
+                    skyblue 20%,
+                    skyblue 40%,
+                    green 40%,
+                    green 60%,
+                    pink 60%,
+                    pink 80%,
+                    purple 80%);
+        }
+
+        .part2 {
+            width: 600px;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .part2 input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 15px;
+            border: none;
+            caret-color: red;
+            position: relative;
+            outline: none;
+            border-bottom: 5px solid;
+            border-image-source: linear-gradient(to right,
+                    orangered 0%,
+                    orangered 50%,
+                    rgb(7, 135, 86) 50%,
+                    rgb(7, 135, 86) 100%);
+            border-image-slice: 1;
+        }
+
+
+        .part2 input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div>Elzero</div>
+    </div>
+    <hr>
+    <div class="part2">
+        <input type="text" placeholder="one">
+        <br>
+        <input type="text" placeholder="two">
+        <br>
+        <input type="text" placeholder="three">
+
+    </div>
+</body>
+
+</html>

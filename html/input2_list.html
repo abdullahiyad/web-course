@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>List </title>
+</head>
+
+<body>
+
+    <form action="" method="get">
+        <input list="programming" name="prog">
+        <!-- 
+            in this input we dont write a type attribute 
+            we write a list attribute and inside this list we write a id for datalist we made it before 
+            name attribute as same we used always , that name will send to backend file.
+
+         -->
+
+        <datalist id="programming">
+            <!--
+                 this id is important to connect this data list with list input field 
+             -->
+
+            <option value="python">
+            <option value="java">
+            <option value="php">
+            <option value="c#">
+            <option value="c++">
+            <option value="dart">
+            <option value="flutter">
+                <!-- 
+                    option tag in this list is self close tag , that mean we dont need a closing tag like in select input tag
+                    the value attribute is what will show in list input filed , and will send to backend file.
+
+                 -->
+        </datalist>
+        <!-- the diffrent between select tag and list input tag  that we can search in this list in option ,
+             but in select list we cant search.
+            and in this input list we cant put the options in group by using optgroup tag like in select  -->
+    </form>
+</body>
+
+</html>

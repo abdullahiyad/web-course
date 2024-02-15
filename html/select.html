@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Select</title>
+</head>
+
+<body>`
+    <form action="test.py" method="get">
+        <label for="selectId"> Select</label>
+        <br>
+        <!-- 
+
+            select attribute:
+            -name: name="" set a name for select tag
+            -id : id="" set a id for a select tag
+            -multiple : multiple attribute will let user to chose more that one option , by press ctrl and right click in mouse on the option
+            
+         -->
+
+        <!--  
+            optGroup tag
+            atttribute:
+            label: set a text for option group will show in list 
+          -->
+
+        <!-- 
+            option tag
+
+            attribute: 
+            -value: value=""  , value attribute is the real value that will send in background with data
+            -insde the open tag and close tag (<option> Option name </option> ) we write the optoin name that will show in list
+            -selected : select a default value will be selected when you run the page
+           -->
+        <select name="select" id="selectId" multiple>
+            <optgroup label="hello">
+                <option value="op1">option 1</option>
+                <option value="op2" selected>option 2</option>
+                <option value="op3">option 3</option>
+                <option value="op4">option 4</option>
+                <option value="op5">option 5</option>
+            </optgroup>
+            <optgroup label="hello2"">
+            <option value=" op6">option 6</option>
+                <option value="op7">option 7</option>
+                <option value="op8">option 8</option>
+            </optgroup>
+        </select>
+
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

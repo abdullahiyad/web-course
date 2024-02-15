@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        /* ===== Flex Box ====== */
+        /* to use flex box theres a propertys for the parent(container)
+           and theres propertys for the elements(child)
+        */
+        /* propertys for parent: 
+              [1] display : flex ; => to start flexible box
+              [2] flex-direction : row ; 
+              [3] flex-wrap : wrap ;
+              [4] flex-flow : row wrap ;
+              [5] justify-content :flex-start ; =>flex box يقوم بتحديد طريقه توزيع المحتولا داخل
+              [6] align-items: stretch ; => Align items vertically
+        */
+        /* Propertys for child :
+            [1] flex-grow : 0 ; =>default value 0 
+            [2] flex-shrink : 1 ; =>default value 1
+            [3] order: 1 ; 
+            [4] flex-basis : auto ; => default value يقوم بتوزيع ابعاد العنصر بشكل اوتوماتيكي 
+        */
+
+        /* Flex Basis 
+        #flex basis can written by px or persantage (%)
+        #you can only use with flex property 
+        #this property doesnt effect with elements that have position absolute
+        #flex basis proprty effected by max-width proprty
+
+        */
+
+        /* the different between [flex basis]vs[width] 
+        العرض له علاقه بعرض العنصر فقط ولكن  هذه الميزه لها علاقه بعرض العنصر وبطوله ايضا
+
+        */
+        .first-diff {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .parent1,
+        .parent2 {
+            background-color: #ddd;
+            margin: auto;
+            width: 500px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .parent1 div,
+        .parent2 div {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-right: 5px;
+            width: 40px;
+
+        }
+
+        .parent1 .child3 {
+            background-color: green;
+            width: 80px;
+        }
+
+        .parent2 .child3 {
+            background-color: green;
+            flex-basis: 80px;
+        }
+
+        /*ي هذا المثال اولا قمت بعمل كل شي وحددت لاحدهما العرض والاخر استعملت معه الميزه الجديده وبعدها فمت بتحول الفليكس بوكس لشكل عمودي وهنا الفرق في العمود
+         الاول الذي استعملت فيه ميزه العرض عند تحويل الصف لعمود بقي الشكل بالعرض ولكن في العمود الثاني الذي استعملت فيه الميزه الجديده عند التغير تحول العرض للطول وهذا مفيد في الريسبونسف */
+        /* ============================================================== */
+        /* Short Hand
+        flex : [flex-grow] [flex-shrink] [flex-basis] ; => default value  flex : 0 1 auto;
+        */
+
+
+        /*display: inline-flex 
+          هذه الخاصيه تجعل البيرنت فليكس وتجعله انلاين ايضا ,اي انه اذا جاء عنصر بعد البيرنت سوف ياتي بجانبه وليس اسفله  
+        */
+    </style>
+</head>
+
+<body>
+    <div class="first-diff">
+
+        <div class="parent1">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+            <div class="child4">4</div>
+            <div class="child5">5</div>
+            <div class="child6">6</div>
+        </div>
+        <hr>
+        <div class="parent2">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+            <div class="child4">4</div>
+            <div class="child5">5</div>
+            <div class="child6">6</div>
+        </div>
+    </div>
+    <hr>
+
+</body>
+
+</html>

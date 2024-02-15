@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin collapse</title>
+    <style>
+        .test1 div {
+            color: white;
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+
+        .test1 .parent {
+            margin: auto;
+            width: 600px;
+            height: 400px;
+            background-color: #ddd;
+
+        }
+
+        .test1 .one {
+            float: left;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }
+
+        .test1 .two {
+            background-color: #ddd;
+            height: 100%;
+            width: 50%;
+            float: left;
+        }
+
+        .test1 .three {
+            background-color: green;
+            height: 190px;
+            width: 100%;
+            margin-bottom: 20px;
+
+        }
+
+        .test1 .four {
+            background-color: blueviolet;
+            height: 190px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* in this Divs i wirte a margin top and margin bottom , 
+        the margin bottom of upper div equal 20px and the margin top
+        of down div equal 20px that mean we have 40px margin but if we doing inspect and see the margin 
+        you will find just 20px because the margin is collapsing */
+        /* ========================================================== */
+        .test2 div {
+            color: white;
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+
+        .test2 .parent {
+            margin: auto;
+            width: 600px;
+            height: 400px;
+            background-color: #ddd;
+
+        }
+
+        .test2 .one {
+            float: left;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }
+
+        .test2 .two {
+            background-color: #ddd;
+            height: 100%;
+            width: 50%;
+            float: left;
+        }
+
+        .test2 .three {
+            background-color: green;
+            height: 160px;
+            width: 100%;
+            margin-bottom: 80px;
+
+        }
+
+        .test2 .four {
+            background-color: blueviolet;
+            height: 160px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* in this Divs i wirte a margin top and margin bottom , 
+        the margin bottom of upper div equal 80px and the margin top
+        of down div equal 20px that mean we have 100px margin but if we doing inspect and see the margin 
+        you will find just 80px because the margin is collapsing, and 
+        the bigger margin is display */
+
+        /* ========================================================== */
+
+        /*===== Margin collapse ===== */
+        /* 
+        [1] only Vertical margin collapse , that mean just margin-top and margin-bottom just collapse not right and left
+        [2] Bigger margin Win
+        [3] Margin collapsing wiht elmenets without Anything between
+        [4] Neasting Does Not Prevent collapsing 
+        */
+    </style>
+</head>
+
+<body>
+    <div class="test1">
+        Test 1
+        <div class="parent">
+            <div class="one"></div>
+            <div class="two">
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="test2">
+        Test 2
+        <div class="parent">
+            <div class="one"></div>
+            <div class="two">
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

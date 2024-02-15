@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+
+</head>
+
+<body>
+    <!--Form 
+        
+        input element should be inside form tag
+        attribute: 
+        1-action:action="fileName.php" in action you write the file name where the values in form will saved. 
+        2-method : the way to send the data of form 
+        theres two method :
+        1-get : when you used get method the data will show on up in url of link
+        2-post :when you used post method the data will not show on up in url of link
+    -->
+    <form novalidate target="_blank">
+        <fieldset>
+            <legend>Input types :</legend>
+            <!-- 
+            input tag
+        -input element is inline
+        -input element is self closing tag
+
+            attribute:
+        1-type: type="" to write the type of input  like text , email , password ,etc.
+        2-required : to force the user to insert information inside the input field
+        3-placeholder: placeholder="" like a label insde the field and disapper when the user hover on the field to write .
+        4-value : value="" this attribute give the field default value when you run the page , and you can change it .
+        5-name: name="" name attribute is like a label for the field input but in the backend and not show in the page
+            and its important for using in css later 
+        6-hidden : type="hidden"  disaper the value field from the page
+        7-min : min=""
+        8-max : max=""
+        9-step : step=""
+        10-readonly: you can just read the value in input field and you cant change it or enter another value, but the value sent with data form to file in backend
+        11-disabled: you can just read the value in input field and you cant chagne it or enter another value , 
+            the data inside this field will not sent with data form to backend
+        12-autofocus: when you open the page the pionter will be in the field ,automatic focus 
+        13-minlength : minlength="" you put the minmum cracters or letters the user should entered
+        14-maxlength : maxlength="" you put the maximum ctacters or letters the user can entered
+        15- checked : using for radio button and chaeckbox button , the radio will be selected when you open the page 
+        16- id : id=""
+        17-size: size="" the width of input field , when you write size="5" the input field width will take more than 5 letters
+            but just 5 letter you can see in the field the other letters to see it you will slide write or left
+        18-No validate : novalidate -> this attribute will turn off the validate when user enter in input field like email or url 
+        19-target : target="_blank"
+        20-autocomplete : this attribute take two values on or off / autocomplete="on" , When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+
+         
+        -->
+
+            <!-- 
+            Type:
+            the type attribute have more than one vlue , and the field of input changed depands on the type value:
+            1-text : type="text" -> write field
+            2-submit : type="submit" ->button field
+            3-reset : type="reset" ->button field-> will delete all data in input fields 
+            4-password : type="password" ->wirte field
+            5-email : type="email" ->wirte filed
+            6-color : type="color" ->button filed
+            7-hidden : type="hidden"  disaper the value field from the page
+            8-range : type="range"->slide bar button field
+            9-number: type="number" -> write and button field
+            10-radio : type="radio" -> radio button
+            11-checkBox : type="checkbox"-> checkBox button
+            12-Date : type="date"-> date list button
+            13-datetime-local : type="datetime-local" 
+            14-file : type="file"->choose file button
+            15-Month date : type="month"-> month date button
+            16-url : type="url" -> write url field , just accept text in url form
+            17-Time : type="time"-> time field button
+            18-button : type="button" -> button 
+         -->
+
+            <!-- label -->
+            <!-- 
+            label is inline element
+            not self closing tag
+            
+            attribute : 
+            -for : for="id" , this attribute using to conntect the label with the input field , 
+            to using this attribute you should be identife the id attribute for the input filed and give him value , then come to label tag and identife 
+            the )(for) attribute  and set the value of id inside the double qutation of for attribute.
+
+         -->
+
+            <!-- field set 
+        the field set tag make a line border around the input field in form 
+            
+            legend tag
+            this tag not self closing tag
+            this tag make a title on field set border
+    -->
+            <label for="dateId">Date : </label>
+
+            <input type="date" name="date" id="dateId" value="2024-05-26" min="2002-04-25" max="2024-06-01">
+            <hr>
+            <label for="dateID2">Date : </label>
+            <input type="datetime-local" name="date" id="dateID2" value="2024-05-26 12:00" min="2002-04-25 12:00"
+                max="2024-06-01 12:00">
+            <hr>
+            <label for="fileId">File</label>
+            <input type="file" id="fileId" name="file">
+            <hr>
+            <label for="month">Month date</label>
+            <input type="month" id="month" name="month" value="2002-06" min="2002-04" max="2002-10">
+            <hr>
+            <label for="text">Text</label>
+            <input type="text" id="text" name="text" size="5">
+            <hr>
+            <label for="searchId">Search</label>
+            <input type="search" id="searchId" name="search" placeholder="what do you want?">
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

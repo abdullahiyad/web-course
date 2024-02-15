@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .part1 {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 6px 0px orangered, -6px 0px skyblue;
+            color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ========================================================= */
+
+        .part2 .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            background-color: #ddd;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .part2 .parent div {
+            background-color: red;
+            color: white;
+            width: 160px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* ========================================================== */
+        .part3 .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            background-color: #ddd;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            flex-wrap: wrap-reverse;
+            flex-direction: row-reverse;
+        }
+
+        .part3 .parent div {
+            background-color: rgb(71, 71, 80);
+            color: white;
+            width: 160px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .part3 .three {
+            order: 5;
+            align-self: flex-end;
+        }
+
+        .part3 .four {
+            order: 4;
+        }
+
+        .part3 .five {
+            order: 3;
+        }
+
+        .part3 .six {
+            order: 6;
+        }
+
+        .part3 .one {
+            align-self: flex-start;
+        }
+
+        /* =================================================================== */
+        .part4 .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: #ddd;
+            justify-content: space-between;
+        }
+
+        .part4 .parent div {
+            background-color: rgb(18, 156, 142);
+            padding: 10px;
+            color: white;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part4 .parent .two {
+            align-self: flex-start;
+            width: 50%;
+        }
+
+        /* =================================================================== */
+        .part5 .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            padding: 20px;
+            background-color: #ddd;
+            justify-content: space-between;
+        }
+
+        .part5 .parent div {
+            display: flex;
+            background-color: brown;
+            color: wheat;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+        }
+
+        .part5 .parent .four {
+            order: -1;
+            background-color: blueviolet;
+            align-self: flex-end;
+        }
+
+        .part5 .parent .one {
+            order: 1;
+            background-color: orange;
+        }
+
+        .part5 .parent .two {
+            order: 2;
+            background-color: rgba(107, 168, 15, 0.714);
+            align-self: flex-end;
+        }
+
+        .part5 .parent .three {
+            order: 3;
+            background-color: rgba(132, 35, 35, 0.844);
+        }
+
+        /* ================================================================ */
+        :root {
+            --mainbackground-color: #ddd;
+            --content-height: 75%;
+            --nav-height: 10%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .part6 .page {
+            display: flex;
+            padding: 20px;
+            background-color: #eee;
+            margin: auto;
+            height: 500px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .part6 .page .header {
+            order: 0;
+            width: 100%;
+            height: var(--nav-height);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header .logo {
+            width: 12%;
+            background-color: var(--mainbackground-color);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .links {
+            list-style-type: none;
+            display: flex;
+            background-color: var(--mainbackground-color);
+            height: 100%;
+            width: 86%;
+            justify-content: flex-end;
+            align-items: center;
+            align-self: center;
+        }
+
+        li {
+            margin-right: 10px;
+        }
+
+        .main-area {
+            display: flex;
+            order: 1;
+            width: 100%;
+            height: var(--content-height);
+            justify-content: space-between;
+        }
+
+        .main-area .content {
+            width: 68%;
+            background-color: var(--mainbackground-color);
+            display: flex;
+            padding: 15px;
+        }
+
+        .main-area .sidebar {
+            width: 30%;
+            background-color: var(--mainbackground-color);
+            padding: 15px;
+        }
+
+        .footer {
+            display: flex;
+            order: 2;
+            height: var(--nav-height);
+            width: 100%;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: var(--mainbackground-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div>Elzero</div>
+    </div>
+    <hr>
+    <div class="part2">
+        <div class="parent">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part3">
+        <div class="parent">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part4">
+        <div class="parent">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part5">
+        <div class="parent">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part6">
+        <div class="page">
+            <div class="header">
+                <div class="logo">Logo</div>
+                <ul class="links">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="main-area">
+                <div class="content">Content</div>
+                <div class="sidebar">Sidebar</div>
+            </div>
+            <div class="footer">
+                <div class="copyright">Copyright 2021</div>
+                <div class="design">Designed By Elzero</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

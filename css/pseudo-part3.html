@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px;
+
+        }
+
+        .header {
+            width: 85px;
+            height: 85px;
+            float: left;
+            margin: 0px 20px;
+            background-color: #ddd;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        .text {
+            width: 700px;
+            float: right;
+            background-color: #ddd;
+            padding: 15px;
+            position: relative;
+        }
+
+        .text::after {
+            content: "";
+            background-color: green;
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            right: -10px;
+            top: 0px;
+        }
+
+        .text::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            left: -33px;
+            top: 30%;
+            border: 15px solid green;
+            border-color: transparent green transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <p class="header">A</p>
+        <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident culpa ex iure, non labore
+            nam corrupti nostrum explicabo tempore alias reiciendis deserunt aspernatur ipsam soluta aliquam debitis
+            optio officia placeat.</div>
+    </div>
+    <div class="parent">
+        <p class="header">B</p>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus exercitationem natus
+            eos, saepe, dolores voluptate odit consequatur deleniti doloribus eum repellat quasi itaque, at quos.
+            Obcaecati cum facilis soluta.</div>
+    </div>
+    <div class="parent">
+        <p class="header">C</p>
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus voluptatum consequuntur
+            fugit voluptatem iure repudiandae aliquid odit assumenda quae voluptate facere corporis labore excepturi
+            deleniti, est nesciunt nisi laboriosam optio!</div>
+    </div>
+</body>
+
+</html>

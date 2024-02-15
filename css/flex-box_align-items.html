@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items</title>
+    <style>
+        /* ===== Flex Box ====== */
+        /* to use flex box theres a propertys for the parent(container)
+           and theres propertys for the elements(child)
+        */
+        /* propertys for parent: 
+              [1] display : flex ; => to start flexible box
+              [2] flex-direction : row ; 
+              [3] flex-wrap : wrap ;
+              [4] flex-flow : row wrap ;
+              [5] justify-content :flex-start ; =>flex box يقوم بتحديد طريقه توزيع المحتولا داخل
+              [6] align-items: stretch ; => Align items vertically
+        */
+
+        /*[Align items]
+              align items propertys using to align the elements vertically
+              values:
+              [1] stretch: this is the default value , the elements will stretch to fit parent heigh; 
+                            if we increase the container height => the elements height will increase too(this happend if we dont give the elements height previous).
+              [2] flex-start
+              [3] flex-end
+              [4] center    
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        .float {
+            overflow: hidden;
+            width: 600px;
+            background-color: #ddd;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        .float div {
+            background-color: red;
+            color: white;
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flex {
+            width: 600px;
+            background-color: #ddd;
+            margin: auto;
+            padding: 10px;
+            /* flex propertys for parent */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+
+        .flex div {
+            background-color: red;
+            width: 25%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flex-part2 {
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            background-color: green;
+            color: white;
+            display: flex;
+            text-align: center;
+            /* x not working x */
+            justify-content: center;
+            /* working */
+            align-items: center;
+            /* working */
+            /* using justify-content & align-items we align the text in center of div */
+        }
+    </style>
+</head>
+
+<body>
+    Float
+    <div class="float">
+
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+    </div>
+    <hr>
+    flex
+    <div class="flex">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+    </div>
+    <hr>
+    <div class="flex-part2">
+        flex Part 2
+    </div>
+</body>
+
+</html>

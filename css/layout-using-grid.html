@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .page {
+            display: grid;
+            background-color: #eee;
+            height: 100vh;
+            grid-template-columns: repeat(10, 10%);
+            grid-template-rows: 50px auto 50px;
+            grid-template-areas:
+                "logo logo nav nav nav nav nav nav nav nav"
+                "content content content content content content content content sidebar sidebar"
+                "footer footer footer footer footer footer footer footer footer footer";
+            gap: 5px 5px;
+        }
+
+        h2 {
+            grid-area: logo;
+            background-color: #ddd;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: #ddd;
+        }
+
+        section {
+            grid-area: content;
+            background-color: #ddd;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: #ddd;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #ddd;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+        }
+
+        ul li {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h2>Test Layout</h2>
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>bussnis</li>
+                <li>Store</li>
+                <li>content</li>
+            </ul>
+        </div>
+        <section>content</section>
+        <aside>
+            sidebar
+        </aside>
+        <footer>
+            the end
+        </footer>
+    </div>
+</body>
+
+</html>

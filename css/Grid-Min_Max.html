@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/master.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .parent {
+            margin: auto;
+            background-color: #ddd;
+            height: 500px;
+            display: grid;
+            /*-template-columns: minmax(200px, 400px) minmax(300px, 400px) 1fr;     */
+            /* for responsive  : */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+        }
+
+        .parent div {
+            background: red;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+
+
+        }
+
+        /* source :  https://www.youtube.com/watch?v=NO4IeLSKNdw&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=63&ab_channel=ElzeroWebSchool */
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>

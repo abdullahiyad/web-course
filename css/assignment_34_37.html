@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .part1 div {
+            width: 300px;
+            height: 60px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 55px;
+            background-color: #ddd;
+        }
+
+        .part1 div:empty {
+            background-color: red;
+        }
+
+        .part2 div {
+            background-color: #ddd;
+            margin: auto;
+            width: fit-content;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+        }
+
+        .part2 div::first-letter {
+            background-color: red;
+            color: white;
+            padding: 7px;
+            position: absolute;
+            margin-left: -30px;
+            margin-right: 15px;
+        }
+
+        .part3 p {
+            background-color: #ddd;
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            border-left: 5px solid #e91e63;
+        }
+
+        .part3 p::before {
+            content: attr(data-person);
+            text-align: center;
+            position: absolute;
+            background-color: #ddd;
+            left: -120px;
+            top: 5px;
+            width: 60px;
+            padding: 15px;
+        }
+
+        .part3 p::after {
+            content: "";
+            position: absolute;
+            border: 15px solid;
+            border-color: transparent #e91e63 transparent transparent;
+            left: -32px;
+            top: 27%;
+        }
+
+        .part4 p {
+            background-color: #ddd;
+            position: relative;
+            width: 400px;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            counter-increment: pargraph-counter;
+        }
+
+        .part4 p::before {
+            content: counter(pargraph-counter);
+            position: absolute;
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            left: -48px;
+            top: 0px;
+        }
+
+        .part4 p::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: #f44336;
+            right: -5px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <h2>Part 1</h2>
+        <div>One</div>
+        <div></div>
+        <div>Three</div>
+    </div>
+    <hr>
+    <div class="part2">
+        <h2>Part 2</h2>
+        <div>1 Hello, Welcome To Elzero Web School</div>
+    </div>
+    <hr>
+    <div class="part3">
+        <h2>Part 3</h2>
+        <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+        <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+        <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+    </div>
+    <hr>
+    <div class="part4">
+        <h2>Part 4</h2>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+    </div>
+</body>
+
+</html>

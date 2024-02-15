@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .part1 .parent {
+            background-color: #eee;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            transition-duration: 0.5s;
+        }
+
+        .part1 .parent .child {
+            background-color: #ddd;
+            width: 260px;
+            text-align: center;
+            margin: auto;
+            margin-top: 10px;
+            padding: 20px;
+            transition-delay: .5s;
+            transition-duration: .5s;
+        }
+
+        .part1 .parent:hover {
+            margin-top: 20px;
+
+        }
+
+        .part1 .parent:hover .child {
+            margin-top: 40px;
+            transition-duration: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        /* ============================= */
+        .part2 div {
+            background-color: #ddd !important;
+            border: none !important;
+            color: transparent !important;
+            font-display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            margin: auto;
+            font-size: 20px !important;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .part2 div::before {
+            font-family: Arial, Helvetica, sans-serif;
+            content: "Elzero";
+            position: absolute;
+            color: black;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* ========================= */
+
+        /*
+         :root {
+            --mainColor: #009688;
+            --mainPadding: 10px;
+        }
+        */
+        .part3 div {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 3px solid var(--mainColor, black);
+            color: var(--mainColor, red);
+            background-color: transparent;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div class="parent">
+            Will Go Up On Hover in Half Second
+            <div class="child">Will GO Down After Half Second</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part2">
+        <div style="
+                  background-color: red;
+                  color: white;
+                  padding: 20px;
+                  border: 1px solid blue;
+                  font-size: 80px;">
+            Hello Div
+        </div>
+    </div>
+    <hr>
+    <div class="part3">
+        <div>Element</div>
+        <div>Element</div>
+        <div>Element</div>
+    </div>
+</body>
+
+</html>

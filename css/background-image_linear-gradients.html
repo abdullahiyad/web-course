@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradients</title>
+    <style>
+        /* Linear Gradients */
+        /* this property used for background , its make the background gradual from color to another  
+        #
+        background-image:linear-gardient([direction/ Angle], [color 1], [color 2], [color 3],... );
+        #
+        background-image:linear-gardient(to left , red , yellow );
+        background-image:linear-gardient(90 deg , red , yellow );
+
+        */
+        div {
+            width: 400px;
+            height: 200px;
+            border: 2px solid;
+            margin: auto;
+        }
+
+        .first {
+            background-image: linear-gradient(90deg, blue, rgb(255, 0, 247));
+        }
+
+        .sec {
+            background-image: linear-gradient(to right,
+                    blue 20%,
+                    blue 30%,
+                    purple 30%,
+                    purple 50%,
+                    rgb(64, 57, 67) 70%,
+                    rgb(64, 57, 67) 100%);
+        }
+
+        .three {
+            background-color: #ddd;
+            position: relative;
+
+        }
+
+        .three::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-image: linear-gradient(to right, blue, rgb(255, 16, 255));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first"></div>
+    <hr>
+    <div class="sec"></div>
+    <hr>
+    <div class="three"></div>
+</body>
+
+</html>

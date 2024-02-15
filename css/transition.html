@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        /* https://udn.realityripple.com/docs/Web/CSS/CSS_animated_properties */
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 50px;
+            /* =====Transition property==== */
+            /* transition using to make animation in web page using css */
+            transition-duration: 1s;
+            /* Transition-duration 
+               # using to set the time required to animation from start to end 
+               # transiton duration can be in secound(s) or in ms
+               # increasing transition duration time make the animation more smoother
+            */
+            transition-delay: 1s;
+            /* transiton delay
+             # transition delay using to delay the transition animation for a specific period of time 
+             # transition delay can be in s or in ms
+             */
+            transition-property: all;
+            transition-property: margin-top, width;
+            /* transition property
+             # using to specific the property that will be effected by transition animation
+             # transition property can take (all) value or we can write the propertys name 
+             # the propertys that not written in transition property will changed but will not be animatted and will
+                not effected by transition duration or transition delay
+            */
+            transition-timing-function: ease;
+            /* transition timing function
+             # using to specific the way and speed of animation
+             #transition timing function values:
+                [1] ease: this is the default value , the transition start slowly and then get be faster and in end get back slowly
+                [2] ease-in: the transition start slowly and then get faster
+                [3] ease-out: the transition start fast and in the end get slowly
+                [4] ease-in-out: the transition start slowly and will be to end slowly, its not like ease value becasue the ease in middle get faster but this stay slowly from begin to end 
+                [5] linear: the transition speed will be the same from begin to end 
+            */
+            transition: all 2s ease-in 0s;
+            transition: height 1s ease 1s, width 2s;
+            /* transition short hand
+             # this short hand for all transition propertys we larned in this lesson
+             #the values of this property :
+                transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay]
+             # this property can take more than one property like that:
+                transiton: width 2s ease , height 1s ease-in 500ms;
+            */
+        }
+
+        .test:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test">
+        Test Div
+    </div>
+</body>
+
+</html>

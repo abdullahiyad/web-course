@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasted</title>
+    <style>
+        div p {
+            color: red;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        p {
+            color: blue;
+        }
+
+        /* if i want to design the paragraph insdie the div that have class name special 
+        i cant using the class special becuase the is another one pargraph that has the same class name
+        so we using the nasted way
+        */
+        div .special {
+            color: green;
+            font-weight: bold;
+            background-color: black;
+        }
+
+        div .special span {
+            color: blue;
+        }
+
+        /* so its like write the path of item before write it */
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="special">special inside div <span>hello</span></p>
+        <p> inside div</p>
+    </div>
+    <p>outside div</p>
+    <p class="special"></p>
+</body>
+
+</html>

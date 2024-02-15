@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        /* ===== Flex Box ====== */
+        /* to use flex box theres a propertys for the parent(container)
+           and theres propertys for the elements(child)
+        */
+        /* propertys for parent: 
+              [1] display : flex ; => to start flexible box
+|-------------[2] flex-direction : row ; 
+| |-----------[3] flex-wrap : wrap ;
+| | |---------[4] flex-flow : row wrap ;
+| | | |-------[5] justify-content :flex-start ; =>flex box يقوم بتحديد طريقه توزيع المحتولا داخل
+| | | |
+| | | | 
+| | | | 
+| | | | 
+| | | | 
+| | | | 
+| | | | 
+| | | | 
+| | | | 
+| | | |
+| | | |->[justify-content]_________________________________________________________________________________________________
+| | |   |   #this property to dealing new content in flex box                                                             |  
+| | |   |   #justify content values :                                                                                     |    
+| | |   |   [1] flex-start / left : this is the default value,when we add new element the element will added from the left|              
+| | |   |                           (begin of perent border)                                                              |  
+| | |   |   [2] flex-end / right : when we add new element the element will added from the right                          |   
+| | |   |                           (the end of perent border)                                                            |  
+| | |   |   [2] center : when we add new element the element will added in the center (middle)                            | 
+| | |   |   [3] space-between : make a space between elements , in flex part2 i have 4 elements , the width of every      |                        
+| | |   |                       element=22% ,then width of all elements=88% ,=>12% empty width , so when we using         |                                          
+| | |   |                        this propery this space will be between elements (margin)                                |      
+| | |   |   [4] space-around :  make a space around elements , in flex part2 i have 4 elements , the width of every       |                       
+| | |   |                       element=22% ,then width of all elements=88% ,=>12% empty width , so when we using         |                                          
+| | |   |                        this propery this space will be around elements (margin-left and margin-right)           |                             
+| | |   |   [5] space-evenly :  make a space around elements , in flex part2 i have 4 elements , the width of every       |                       
+| | |   |                       element=22.5% ,then width of all elements=90% ,=>10% empty width , so when we using       |                                            
+| | |   |                        this propery this space will be around elements (space between elements 3*2%=6%, ,       |                                  
+| | |   |                        and 2% before and after elements                                                         |          
+| | |   |_________________________________________________________________________________________________________________|                                                                                                  
+| | |       
+| | |--->[flex-flow]_______________________________________________________________________________________________
+| |     |   #this property is short hand of two propertys [flex-direction + flex wrap]                            |
+| |     |   #flex flow values :                                                                                   |
+| |     |    flex-flow : [flex-dirextion] [flex-wrap] ;                                                           |
+| |     |    flex-flow : row nowrap ;                                                                             |
+| |     |_________________________________________________________________________________________________________|                                                                                                     
+| | 
+| |----->[flex-wrap]_______________________________________________________________________________________________
+|       |   #this property to dealing with the over                                                               |
+|       |   #flex wrap values :                                                                                   |
+|       |   [1] nowrap : this is the default value, when elements width come more the parent width                |
+|       |                then elements width flex and change to stay in the same row.                             |
+|       |   [2] wrap :  when elements width come more the parent width then elements width doesn't change         |
+|       |                and the new element go down in new row.                                                  |
+|       |   [3] wrap-reverse :  when elements width come more the parent width then elements width doesn't change |
+|       |              and the new element go up in new row.                                                      |
+|       |_________________________________________________________________________________________________________| 
+|        
+|-------->[flex-direction]__________________________________________________________________________
+         |    #flex direction values:                                                              |          
+         |    [1] row : this is the default value, this value display elements horizantal (row)    |
+         |    [2] row-reverse : this value display elements in row but the elements will reversed  |    
+         |    [3] column : this value display elements in vertical direction (column)              |
+         |    [4] column-reverse : this value display elements in column but the elements reversed |  
+         |_________________________________________________________________________________________|           
+         */
+        * {
+            box-sizing: border-box;
+        }
+
+        .float {
+            overflow: hidden;
+            width: 600px;
+            background-color: #ddd;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .float div {
+            background-color: red;
+            color: white;
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flex {
+            width: 600px;
+            background-color: #ddd;
+            margin: auto;
+            padding: 10px;
+            /* flex propertys for parent */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+
+        .flex div {
+            background-color: red;
+            width: 25%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flex-part2 {
+            width: 600px;
+            background-color: #ddd;
+            margin: auto;
+            padding: 10px;
+            /* flex propertys for parent */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .flex-part2 div {
+            background-color: red;
+            width: 22%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* source : https://www.youtube.com/watch?v=JkCLL1CzNZk&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=46&ab_channel=ElzeroWebSchool */
+    </style>
+</head>
+
+<body>
+    Float
+    <div class="float">
+
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+    </div>
+    <hr>
+    flex
+    <div class="flex">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+    </div>
+    <hr>
+    flex part 2
+    <div class="flex-part2">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+    </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px;
+            counter-increment: test-counter;
+            /* her put the counter name */
+        }
+
+        .header {
+            width: 85px;
+            height: 85px;
+            float: left;
+            margin: 0px 20px;
+            background-color: #ddd;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        .text {
+            width: 700px;
+            float: right;
+            background-color: #ddd;
+            padding: 15px;
+            position: relative;
+        }
+
+        .text::after {
+            /* her put in content a counter method and put inside the method the name of counter without qutatoin */
+            content: counter(test-counter);
+            background-color: black;
+            color: white;
+            padding: 6px;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            margin-top: -10px;
+        }
+
+        .text::before {
+            content: attr(data-text);
+            /* we using attr method to access the html attribute  */
+            background-color: red;
+            /* i put a background just to recognize */
+            /* and we can another  */
+        }
+
+        .test::before {
+            content: attr(test-attribute);
+            display: none;
+            font-weight: bold;
+            font-size: large;
+            color: blue;
+        }
+
+        .test:hover::before {
+            display: inline;
+            /* we can use pseudo class with pseudo elements together */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <p class="header">A</p>
+        <div class="text" data-text="anything">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident culpa
+            ex iure, non labore
+            nam corrupti nostrum explicabo tempore alias reiciendis deserunt aspernatur ipsam soluta aliquam debitis
+            optio officia placeat.</div>
+    </div>
+    <div class="parent">
+        <p class="header">B</p>
+        <div class="text" data-text="anything">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus
+            exercitationem natus
+            eos, saepe, dolores voluptate odit consequatur deleniti doloribus eum repellat quasi itaque, at quos.
+            Obcaecati cum facilis soluta.</div>
+    </div>
+    <div class="parent">
+        <p class="header">C</p>
+        <div class="text" data-text="anything">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+            voluptatum consequuntur
+            fugit voluptatem iure repudiandae aliquid odit assumenda quae voluptate facere corporis labore excepturi
+            deleniti, est nesciunt nisi laboriosam optio!</div>
+    </div>
+    <hr>
+    <div class="test" data-text="anything" test-attribute="TEST">
+        IF we want to access to any attribute in html we can also using the content and pseudo elements
+        <br>hello world
+        <b>hover in this pargraph</b>
+    </div>
+</body>
+
+</html>

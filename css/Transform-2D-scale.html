@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 2D</title>
+    <style>
+        /* Transform 
+        This property using for doing a changes on the element ,
+        there's methods we used i transform :
+        [1] scale() : this method not just increase the width and heigh of the element , but all thigs insdie the element will stretch
+        */
+        /*  
+        transform scale :
+        [1] transform : scaleX(value) ; => will stretch the element in x-axis 
+        [2] transform : scaleY(value) ; => will stretch the element in Y-axis 
+        [3] transform : scale(x-value, y-value) ; => its a short hand ,will stretch the element in x-axis and y-axis
+        
+        */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 800px;
+        }
+
+        div {
+            background-color: pink;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: auto;
+            transition-duration: 0.7s;
+            transform: scaleX(2);
+            transform: scaleY(2);
+            /* short hand  */
+            transform: scale(2, 2);
+            /* or , if the x and y value are equal then : */
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Transform Test
+    </div>
+</body>
+
+</html>

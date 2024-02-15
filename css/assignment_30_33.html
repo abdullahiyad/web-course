@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .part1 div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .green {
+            background-color: #009688;
+            margin-top: 20px;
+            margin-left: 20px;
+            z-index: 3;
+        }
+
+        .red {
+            background-color: #f44336;
+            margin-top: 30px;
+            margin-left: 30px;
+            z-index: 4;
+        }
+
+        .blue {
+            background-color: #03a9f4;
+            margin-top: 10px;
+            margin-left: 10px;
+            z-index: 2;
+        }
+
+
+        .black {
+            background-color: #333333;
+            margin-top: 20px;
+            margin-left: 10px;
+            z-index: 1;
+        }
+
+        .space {
+            margin-bottom: 160px;
+        }
+
+        /* ============================================= */
+        .part2 div {
+            width: 400px;
+            margin: 20px auto;
+            background-color: #eee;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            border: 5px solid;
+            border-color: #f44336 #03a9f4;
+        }
+
+        .top-left,
+        .top-right,
+        .bottom-left,
+        .bottom-right {
+            position: absolute;
+            background-color: #03a9f4;
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+
+        .part2 .top-left {
+            top: -12px;
+            left: -12px;
+            border-right: 5px solid #f44336;
+        }
+
+        .part2 .top-right {
+            top: -12px;
+            right: -12px;
+            border-left: 5px solid #f44336;
+        }
+
+        .part2 .bottom-left {
+            bottom: -12px;
+            left: -12px;
+            border-right: 5px solid #f44336;
+        }
+
+        .part2 .bottom-right {
+            bottom: -12px;
+            right: -12px;
+            border-left: 5px solid #f44336;
+        }
+
+        /* ===================================================== */
+        .part3 .main {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            list-style: none;
+            list-style-position: inside;
+        }
+
+        .part3 .html,
+        .css,
+        .js {
+            background-color: #EEE;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .html li,
+        .css li {
+            list-style-type: decimal;
+            list-style-position: outside;
+            background-color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .html li {
+            list-style-type: decimal;
+        }
+
+        .css li {
+            list-style-type: upper-roman;
+        }
+
+        .js ul {
+            padding-left: 0px;
+        }
+
+        .js li {
+            list-style-position: inside;
+            background-color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+            list-style-type: circle;
+        }
+
+        /* ================================================ */
+        .part4 {
+            margin: 20px auto;
+        }
+
+        .part4 table caption {
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .part4 table {
+            width: 700px;
+            text-align: center;
+            margin: 20px auto;
+            border-spacing: 1px;
+            border-bottom: 3px solid #009688;
+        }
+
+        .part4 table thead {
+            background-color: #404040;
+            height: 50px;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .part4 img {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ddd;
+        }
+
+        .part4 table tbody td {
+            background-color: #eee;
+            height: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .part4 input {
+            border: none;
+            border-radius: 0px;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            cursor: grab;
+        }
+
+        .part4 .view-button {
+            background-color: #03a9f4;
+
+        }
+
+        .part4 .delete-button {
+            background-color: rgb(255, 0, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="black"></div>
+    </div>
+    <hr class="space">
+    <hr>
+    <div class="part2">
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea ipsum
+            similique quasi rem, fugiat voluptatibus reiciendis nam debitis earum quo veniam
+            laudantium mollitia atque! Laborum ea nam doloribus.
+            <span class="top-left">1</span>
+            <span class="bottom-left">2</span>
+            <span class="top-right">3</span>
+            <span class="bottom-right">4</span>
+        </div>
+    </div>
+    <hr>
+    <div class="part3">
+        <ul class="main">
+            <li class="html">
+                HTML
+                <ol start="10">
+                    <li>Slim</li>
+                    <li>Pugjs</li>
+                    <li>HAML</li>
+                </ol>
+            </li>
+            <li class="css">
+                CSS
+                <ol start="10">
+                    <li>SASS</li>
+                    <li>LESS</li>
+                    <li>PostCSS</li>
+                </ol>
+            </li>
+            <li class="js">
+                JavaScript
+                <ul>
+                    <li>Vuejs</li>
+                    <li>Sveltejs</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="part4">
+        <table>
+            <caption>Developers Rating</caption>
+            <thead>
+                <tr>
+                    <td>Avtar</td>
+                    <td>Group</td>
+                    <td>Name</td>
+                    <td>Points</td>
+                    <td>Control</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarBoy.png" alt=""></td>
+                    <td>Ninja</td>
+                    <td>Ahmed Mohamed</td>
+                    <td>120</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarBoy.png" alt=""></td>
+                    <td rowspan="2">Shades</td>
+                    <td>Shady Nabil</td>
+                    <td>180</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarGirl.png" alt=""></td>
+                    <td>Eman Mohamed</td>
+                    <td>160</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarBoy.png" alt=""></td>
+                    <td rowspan="2">Valhala</td>
+                    <td>Mohamed Ibrahim</td>
+                    <td>190</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarGirl.png" alt=""></td>
+                    <td>Noor Atef</td>
+                    <td>110</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="../image/css-assignment-avtarBoy.png" alt=""></td>
+                    <td>Union</td>
+                    <td>Mohamed Adel</td>
+                    <td>90</td>
+                    <td>
+                        <input type="button" value="View" class="view-button">
+                        <input type="button" value="Delete" class="delete-button">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

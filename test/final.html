@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to List</title>
+</head>
+
+<body>
+
+    <h1>Add to list</h1>
+
+    <div>
+        <label for="itemInput">Item to be added: </label>
+        <input type="text" id="itemInput">
+        <button id="addToListButton" onclick="addItem()">Add To List</button>
+        <br><br>
+        <span id="errorMessage"></span>
+    </div>
+
+    <div>
+        <label for="itemCountInput">Number of items in list: </label>
+        <input type="text" id="itemCountInput" readonly size="5">
+        <button onclick="showList()">Show List</button>
+        <button onclick="clearList()">Clear List</button>
+        <br>
+        <p>The following is my own list:</p>
+        <ul id="ShowingList" style="display: none;"></ul>
+    </div>
+
+    <div id="listDisplay"></div>
+
+    <script>
+        let itemCount = 0;
+        let addedItems = [];
+
+        function addItem() {
+            const itemInput = document.getElementById("itemInput");
+            const errorMessage = document.getElementById("errorMessage");
+            const itemCountInput = document.getElementById("itemCountInput");
+            const ShowingList = document.getElementById("ShowingList");
+
+            if (itemInput.value.trim() === "") {
+                errorMessage.textContent = "Please insert an item.";
+            } else {
+                errorMessage.textContent = "";
+                itemCount++;
+                const listItem = document.createElement("li");
+                listItem.textContent = `${itemCount}. ${itemInput.value}`;
+                addedItems.push(listItem.textContent);
+                ShowingList.appendChild(listItem);
+                itemInput.value = "";
+                itemCountInput.value = itemCount;
+            }
+        }
+
+        function showList() {
+            const listDisplay = document.getElementById("listDisplay");
+            const ShowingList = document.getElementById("ShowingList");
+            ShowingList.style.display = "block";
+        }
+
+        function clearList() {
+            const ShowingList = document.getElementById("ShowingList");
+            const itemCountInput = document.getElementById("itemCountInput");
+            const listDisplay = document.getElementById("listDisplay");
+
+            ShowingList.innerHTML = "";
+            listDisplay.innerHTML = "";
+            itemCount = 0;
+            itemCountInput.value = itemCount;
+            addedItems = [];
+            ShowingList.style.display = "none";
+        }
+
+
+        const itemInput = document.getElementById("itemInput");
+        const hoverMessage = document.createElement("span");
+        hoverMessage.id = "hoverMessage";
+        hoverMessage.textContent = "Please insert an item.";
+        addToListButton.addEventListener("mouseover", function () {
+            if (itemInput.value.trim() === "") {
+                addToListButton.parentNode.appendChild(hoverMessage);
+            } else {
+                hoverMessage.remove();
+            }
+        });
+
+        addToListButton.addEventListener("mouseout", function () {
+            hoverMessage.remove();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* ===== Filter Property ===== */
+        /* this property to add a filter to the elements 
+            not just photos , you can add this property to any element 
+         */
+        /* this is the most 4 filters used in web :
+            [1] Grayscale : tihs filter make the photo on gray system(black and white) => take ( % ) values 
+            [2] blue  : this filter make elements blue => take ( px ) values
+            [3] brightness : this filter control on the brightness of the element =>take (%) values
+            [4] saturate : this filter control on element color => take (%) values
+            [5] drop-shadow : this filter added a shodow for the element;
+            This is the most filters used in web 
+            #to see the other filters search in Google [Filters in css]
+         */
+        .image1 {
+            width: 100%;
+            filter: grayscale(100%);
+            transition-duration: 0.5s;
+        }
+
+        .image1:hover {
+            filter: grayscale(0%);
+        }
+
+        .image2 {
+            width: 100%;
+            transition-duration: 0.5s;
+            filter: blur(5px);
+        }
+
+        .image2:hover {
+            filter: blur(0px);
+        }
+
+        .image3 {
+            width: 100%;
+            transition-duration: 0.5s;
+            filter: brightness(15%)
+        }
+
+        .image3:hover {
+            filter: brightness(100%);
+        }
+
+        .image4 {
+            width: 100%;
+            transition-duration: 0.5s;
+            filter: saturate(100%);
+        }
+
+        .image4:hover {
+            filter: saturate(200%);
+            ;
+        }
+
+        .image5 {
+            width: 80%;
+            transition-duration: 0.5s;
+            filter: drop-shadow(30px 30px 50px #000);
+        }
+
+        .image5:hover {
+            filter: drop-shadow(0px 0px 0px #000);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="image1" src="../image/street.jpg" alt="">
+    <hr>
+    <img class="image2" src="../image/street.jpg" alt="">
+    <hr>
+    <img class="image3" src="../image/street.jpg" alt="">
+    <hr>
+    <img class="image4" src="../image/street.jpg" alt="">
+    <hr>
+    <img class="image5" src="../image/street.jpg" alt="">
+</body>
+
+</html>

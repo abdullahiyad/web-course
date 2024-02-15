@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Declaration</title>
+    <style>
+        /* === Important Declaration === */
+        /* 
+         # As we learned in previous lesson
+            [ inline style > internal style > extrnal style ]
+         # example: 
+         in this div we write a backround color blue inside inline style
+         so if we want to change background color to red in internal style nothing will happend
+         also if we did it with external style nothing will happend 
+        */
+        .test {
+            background-color: red;
+        }
+
+        /* 
+        so we using declare the property as important property 
+        and this happend using (!important) 
+        when we write this word after the property then this property will overwrite
+            [!important declaration > inline style > internal stlye >external style ]
+        */
+        .test {
+            background-color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test" style="background-color: blue;">Test Div</div>
+</body>
+
+</html>

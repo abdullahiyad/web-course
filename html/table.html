@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>Table</head>
+<body>
+<!-- entites:
+    thead : table head
+    tbody : table body
+    tfoot : table footer
+    th-> table header  -> will be bold  and in center of cell
+    tr-> table row cell
+    td-> table data cell
+    caption: this is a tag inside the table , feasiblty of using it to description the table or title for table <caption></caption>
+ 
+    attribute:
+    border : that will make a border for the table , but in these days that attribute not used 
+    cellpadding: determines the distance between cells cellpadding="2px"
+    colspan : merges two cell in the same row together
+    colrow : merges two cell in the same column together
+    -->
+    <table border="2" cellpadding="10px">
+        <caption>Studnet Marks</caption>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mark</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abdullah</td>
+                <td>iyad</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>iyad</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>jana</td>
+                <td>iyad</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" rowspan="2" >total</td>
+                <td  >180</td>
+            </tr>
+            <td>sum</td>
+            <tr>
+                
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

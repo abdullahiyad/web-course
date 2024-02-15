@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <!-- <link rel="stylesheet" href="logInStyle.css"> -->
+    <style>
+        body {
+            background-image: url(hero-slider-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+        .container {
+
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+
+            background-color: rgba(0, 0, 0, 0.80);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 5px 5px 40px rgba(8, 7, 16, 0.6);
+            padding: 70px;
+
+        }
+
+        .container h1 {
+            text-align: center;
+            padding: 10px;
+            color: hsl(38, 61%, 73%);
+            text-shadow: 0px 0px 20px white;
+            font-family: Forum;
+        }
+
+        .username,
+        .password {
+            margin: 20px;
+            font-family: Forum;
+            color: hsl(38, 61%, 73%);
+        }
+
+        .buttons {
+            margin-top: 35px;
+            color: hsl(38, 61%, 73%);
+        }
+
+        .username input,
+        .password input {
+            border: 1px solid rgba(0, 0, 0, 0.13);
+            border-bottom: 1px solid black;
+            width: 220px;
+            background-color: rgba(20, 20, 20, 0.90);
+            backdrop-filter: blur(10px);
+            height: 25px;
+        }
+
+        ::placeholder {
+            color: blanchedalmond;
+        }
+
+        .buttons input {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            display: block;
+            width: 100px;
+            height: 30px;
+            color: balck;
+            background-color: hsl(38, 61%, 73%);
+            backdrop-filter: blur(10px);
+            border: 1px solid black;
+            box-shadow: 0px 0px 0px black;
+            font-family: Forum;
+
+        }
+
+
+        a {
+            padding-top: 10px;
+            text-decoration: none;
+            color: hsl(38, 61%, 73%);
+            width: 50px;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <form action="">
+            <h1>SIGN UP</h1>
+            <div class="username">
+                <input type="text" name="username" id="userId" required placeholder="Name">
+                <br> <br><input type="text" name="username" id="userId" required placeholder="Email">
+                <br> <br><input type="text" name="username" id="userId" required placeholder="Phone Number">
+            </div>
+            <div class="password">
+                <input type="password" name="password" id="passId" required placeholder="Password">
+                <br><br><input type="password" name="password" id="passId" required placeholder=" Repeat password">
+            </div>
+            <div class="buttons">
+                <input type="submit" value="SIGN UP">
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

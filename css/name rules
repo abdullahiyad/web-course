@@ -1,0 +1,10 @@
+what the name rules of css?
+you can't start the identifires(id,class) with numbers of any special carcters
+but you can start using underscore(_) of using dash (-)
+
+what the professional way to give css file name?
+its kabab way
+
+kabab rename way:write the word and put dash insted of space
+like that (first-second-therd)
+(book-store-id)

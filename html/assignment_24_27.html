@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Assignment</title>
+</head>
+
+<body>
+    <form action="test.py" method="post">
+        <div class="nameDiv">
+            <label for="usernameInput">Username :</label>
+            <br>
+            <input type="text" id="usernameInput" name="username" placeholder="enter your username" required>
+        </div>
+        <hr>
+        <div>
+            <label for="passwordInput">Password :</label>
+            <br>
+            <input type="password" id="passwordInput" name="password" placeholder="Enter complex password">
+        </div>
+
+        <hr>
+        <div>
+            <label for="emailInput">Email :</lable> <br>
+                <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+        </div>
+        <hr>
+        <div>
+            <label for="mobileInput">Mobile :</label> <br>
+            <input type="text" id="mobileInput" name="mobile" placeholder="Enter your mobile number"
+                value="+20100 (234) 123" minlength="12">
+        </div>
+        <hr>
+        <div>
+            <label for="subjectInput">Subject :</label><br>
+            <input type="text" id="subjectInput" name="subject" placeholder="Enter subject name">
+        </div>
+        <hr>
+        <div name="radio">
+            <label for="radioInput">Tall :</label><br>
+            <input type="range" id="radioInput" name="tall" min="100" max="500" step="50" value="400">
+        </div>
+        <hr>
+        <div class="hidden">
+            <input type="text" hidden>
+        </div>
+        <div class="buttons">
+            <input type="submit" value="Send Data">
+            <input type="reset" value="Empty Form">
+        </div>
+    </form>
+
+</body>
+
+</html>

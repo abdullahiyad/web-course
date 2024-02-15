@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: green;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        .ch:checked+label {
+            color: blue;
+        }
+
+        .one,
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            margin-bottom: 15px;
+        }
+
+        div:empty {
+            border: 5px solid black;
+            /* اي دييف فارغ سوف يقوم بوضع اطار حوله */
+        }
+
+        :empty {
+            border: 5px solid red;
+            /* اي عنصر بالصفحه شو ما كان نوعه سوف يتم وضع اطار احمر حوله */
+        }
+
+        .in:focus {
+            border-color: yellow;
+            outline: none;
+            /* when you press to input field to write the border color will change to yellow */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.youtube.com">Youtube</a>
+    <a href="httpa://www.linkedin.com">Linked in</a>
+    <hr>
+    <input type="checkbox" name="test" id="testID" class="ch">
+    <label for="testID">Test</label>
+    <hr>
+    <div class="one"></div>
+
+    <div class="two">two</div>
+    <p></p>
+    <hr><input type="text" class="in" placeholder="write here">
+</body>
+
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        /* ======== Grid ======== */
+
+        /* this propertys using for layout the page */
+        /* theres Grid proprtys for parent and theres for child */
+
+        /* Grid propertys for Parent : 
+            [1] display: grid / inline-grid ;
+            [2] gird-template-columns : [number of columns] ; 
+        */
+
+        /* Grid template-columns
+           # this property to set the number or columns and the width of every column
+           # Grid template columns values : 
+                [1] Pixel (px)                   => Grid-template-columns: 100px 100px 100px 90px ;        => 4 columns
+                [2] percentage (%)               => Grid-template-columns : 25% 25% 25% 25% ;              => 4 columns
+                [3] Auto                         => Grid-template-columns : auto auto auto ;               => 3 columns , we write auto as the same number of columns we want
+                [4] Repeat(# of columns , width) => Grid-template-columns : repeat(4 , 100px)              => 4 columns 
+                                                 => Grid-template-columns : repeat(4 , 25%  )              => 4 columns 
+                                                 => Grid-template-columns : repeat(4 , auto )              => 4 columns 
+                [5] we can mix all prev values   => Grid-template-columns : 100px 25% repeat(2,50px) auto ;=> 5 columns 
+                [6] Friction (fr)                => Grid-template-columns : 1fr 1fr 2fr ;                  => 3 columns 
+                   
+                    # friction looks like auto he take the remaining space, example : if the parent width 600px 
+                        and making 4 columns [Grid-template-columns: 100px 100px 100px 1fr ;] first 3 columns take 300px 
+                        and the last columns will take the remaining space  300px 
+
+                    # what the different between friction and auto ? 
+                        the friction is gready and the auto is shy ,example :
+                        if the parent width 600px and we making 4 columns [Grid-template-columns: auto auto 1fr 1fr ;
+                        the first 2 columns width will be 70px or something like that and the last 2 columns width will be 330px , why?
+                        becasue the auto value take space just enough to display the content and if there a free space he will take it 
+                        but the friction value is greedy and he takes as possible as he can takes.        
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 600px;
+            height: 300px;
+            background-color: #ddd;
+            margin: auto;
+            display: grid;
+            grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+            grid-template-columns: auto auto auto;
+            /* this two propertys have the same effect */
+        }
+
+        .parent div {
+            background-color: red;
+            color: white;
+            margin: 2px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>

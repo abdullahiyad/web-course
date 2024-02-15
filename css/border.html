@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        .test {
+            /* change background color */
+            background-color: bisque;
+            /* paading element */
+            padding: 20px;
+            /* give element width */
+            width: 70%;
+            /* margin element */
+            margin-left: auto;
+            margin-right: auto;
+            /* border */
+            border-width: 7px;
+            border-color: balck;
+            border-style: solid;
+            /* every property in border can take 4 value or 3 or 2 or 1 like in margin and padding
+
+             top right bottom left
+             border-width: 7px 5px 3px 2px;
+             border-width: 7px 5px 3px; -> the left border will be like the interviewer 5px
+             border-width: 6px 5px; -> the bottom side in border will be like the interviewer 6px and left the same thing 5px
+             or if i give a one value the all sides will take this value
+             
+             and in border color and style the same thing
+
+             */
+            /* short hand border */
+            border: 7px black solid;
+            border-right: 5px gray ridge;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test">
+        <p>hello world</p>
+    </div>
+</body>
+
+</html>

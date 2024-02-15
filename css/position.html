@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        /* ======position===== */
+        /* 
+        =========================
+        1# static : the default value, the top and others property dont effect on them 
+        2# relative : the element can move using top, left , right and bottom propertys , accept positive and negative values , the element moved from his position
+        3# absolute : the element move using moving properys  , the element moved from parent border  , and dont matter about another elemnts 
+        they can cover another elements , and the parent should position should be relative 
+        4# fixed : the element move using moving propertys , the eleemnt moved from web page border , and when you scrolling the page the elemnt stay on his position
+        5# sticky : the elemnt move unsing moving propertys , the element moved from web page border , and when you scrolling the page the element weill stay on front 
+        */
+        body {
+            height: 5000px;
+        }
+
+        .static {
+            background-color: aqua;
+            width: 100px;
+            height: 50px;
+            position: static;
+            top: 50px;
+            left: 500px;
+            /* the moving proprtys not work */
+        }
+
+        .relative {
+            background-color: red;
+            width: 120px;
+            height: 50px;
+            position: relative;
+            left: 50px;
+            top: 0px;
+        }
+
+        .absolute {
+            background-color: blue;
+            width: 500px;
+            height: 300px;
+            position: relative;
+            left: 50px;
+            top: 0px;
+        }
+
+        .one {
+
+            background-color: red;
+            width: 120px;
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+
+        }
+
+        .fixed {
+            background-color: black;
+            color: white;
+            width: 120px;
+            height: 50px;
+            position: fixed;
+            left: 0px;
+        }
+
+        .border {
+            width: 120px;
+            height: 50px;
+            position: static;
+        }
+
+        .sticky {
+            background-color: blueviolet;
+            color: white;
+            width: 120px;
+            height: 50px;
+            position: sticky;
+            left: 100px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">
+        static postin
+    </div>
+    <hr>
+    <div class="relative">
+        relative position
+    </div>
+    <hr>
+    <div class="absolute">
+        <div class="one">absolute position</div>
+    </div>
+    <hr>
+    <div class="fixed">
+        fixed position
+    </div>
+    <div class="border">
+        border
+    </div>
+    <hr>
+    <div class="sticky">
+        sticky position
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .parent {
+            background-color: red;
+            padding: 10px;
+
+        }
+
+        .parent div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: antiquewhite;
+            text-align: center;
+            width: 25%;
+            float: left;
+            clear: right;
+
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* for more information 
+        https://www.youtube.com/watch?v=ZAb-oI23Oc4&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=27&ab_channel=ElzeroWebSchool
+        */
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>hello1</div>
+        <div>hello2</div>
+        <div>hell3</div>
+        <div>hello4</div>
+        <p class="clear"></p>
+    </div>
+
+    <p>hello world</p>
+</body>
+
+</html>

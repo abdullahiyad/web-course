@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Assignment</legend>
+            <input type="text" name="token" value="b92f1fc2fce391ad7af633723afd3055" hidden>
+            <br>
+            <label for="emailId">Email</label>
+            <input type="email" name="email" id="emailId" value="o@o.com" disabled>
+            <hr>
+            <label for="userId">UserName</label>
+            <input type="text" name="username" id="userId" autofocus minlength="5" maxlength="20" required>
+            <hr>
+            <label for="skillId">skills:</label>
+            <br>
+            <input type="checkbox" name="skills" value="problem Solving" id="psId">
+            <label for="psId">Problem solvling</label>
+            <br>
+            <input type="checkbox" name="skills" value="logical Think" id="logId">
+            <label for="logId">Logical Think</label>
+            <hr>
+
+            <label>Job :</label>
+            <br>
+            <input type="radio" name="Job" value="Front End Developer" id="frontEndID" checked>
+            <label for="frontEndID">Front-End Developer</label>
+            <br>
+            <input type="radio" name="Job" value="backend" id="bakcendID">
+            <label for="bakcendID">Back-End Developer</label>
+            <br>
+            <input type="radio" name="Job" value="projectManger" id="projectMangerID">
+            <label for="projectMangerID">Project Manger</label>
+            <br>
+            <hr>
+            <label for="bookId">Choose Book :</label>
+            <select name="book version" id="bookId">
+                <optgroup label="PHP">
+                    <option value="version 5.0">v5.0</option>
+                    <option value="version 6.0">v6.0</option>
+                    <option value="version 7.0">v7.0</option>
+                </optgroup>
+                <optgroup label="Python">
+                    <option value="version 2.0">V2.0</option>
+                    <option value="version 3.0">V3.0</option>
+                    <option value="version 3.9.0">V3.9</option>
+                </optgroup>
+            </select>
+            <hr>
+            <textarea id="textareaId" name="Text Area" rows="20" cols="80"
+                placeholder="Write Here Why You Want To Learn Programming"></textarea>
+            <hr>
+            <input type="reset" value="Empty">
+            <input type="submit" value="send">
+        </fieldset>
+    </form>
+</body>
+
+</html>

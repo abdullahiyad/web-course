@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <!-- 
+        video attribute 
+        1-src: to write the source path of video file
+        2-controls : to show the controls buttons 
+        3-autoplay : the video will automatic play when you visite the page .
+        4-muted: the video will be muted when you visit the page
+        5-loop : will be replayed again the video  .
+        6-preload : the browser will load the video when the page is loading
+        7-poster : this attribute will show a image in front while video is loading 
+            poster="source path"
+        8-width
+        9-height
+     -->
+    <!-- 
+        there is two way to write the source file path , like audio.
+     -->
+    <video src="">
+
+    </video>
+
+    <video>
+        <source src="" type="">
+        <source src="" type="">
+        sorry , your browser dont support this videos type.
+        <track src="filename.vtt" kind="subtitles" srclang="en" label="English"> 
+        <track src="filename.vtt" kind="subtitles" srclang="ar" label="Arabic"> 
+        <!-- track tag
+        this tag for adding a subtitles for video or caption or another thing 
+
+        track attribute 
+        1-src: to write the source file path 
+        2-kind : to write the type of this file , for subtitle , caption or another things 
+        3-srclang : to write what the langauge of this file 
+        4-label : to write what the Name will show on controls for this file option
+        -->
+    </video>
+
+    <video muted loop controls preload="auto" poster="../image/catasters.jpeg"  width="520" height="300">
+        <source src="../video/Koi-Fish-Sachiro.mp4" type="video/mp4">
+        <source src="../video/Koi-Fish-Sachiro.gg" type="video/ogg">
+        <track src="fileName.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="fileName.vtt" kind="subtitles" srclang="ar" label="Arabic">
+        sorry, your browser not support the type of video.
+    </video>
+
+</body>
+</html>

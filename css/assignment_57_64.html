@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* =================================================== */
+        .part1 .grid {
+            background-color: #ddd;
+            padding: 20px;
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr;
+            gap: 15px;
+        }
+
+        .part1 .grid div {
+            counter-increment: div-counter;
+            background-color: #607d8b;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .part1 .grid div::before {
+            content: "Element " counter(div-counter);
+        }
+
+        /* =================================================== */
+        .part2 .layout {
+            background-color: #aaa;
+            margin: auto;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: repeat(4, 25%);
+        }
+
+        .part2 header {
+            background-color: #03a9f4;
+            color: white;
+            padding: 15px;
+            grid-column: 1/5;
+        }
+
+        .part2 header::before {
+            content: "Header";
+        }
+
+        .part2 section {
+            background-color: orangered;
+            color: white;
+            padding: 15px;
+            grid-column: span 3;
+        }
+
+        .part2 section::before {
+            content: "Section";
+        }
+
+        .part2 aside {
+            background-color: gray;
+            color: white;
+            padding: 15px;
+            grid-column: 4/5;
+        }
+
+        .part2 aside::before {
+            content: "Aside";
+        }
+
+        .part2 footer {
+            background-color: #009688;
+            color: white;
+            padding: 15px;
+            grid-column: span 4;
+        }
+
+        .part2 footer::before {
+            content: "Footer";
+        }
+
+        /* =================================================== */
+        .part3 .grid {
+
+            background-color: #ddd;
+            padding: 20px;
+            width: 90%;
+            height: 400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto 1fr 1fr auto;
+            grid-template-rows: 1fr auto;
+            gap: 15px;
+        }
+
+        .part3 .grid div {
+            background-color: #403f3f;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* =================================================== */
+        .part4 .grid {
+
+            background-color: #ddd;
+            padding: 20px;
+            width: 90%;
+            height: 400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 15px;
+        }
+
+        .part4 .grid div {
+            background-color: #2196f3;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part4 .grid .one {
+            grid-column: span 3;
+            order: 7;
+        }
+
+        .part4 .grid .two {
+            grid-column: span 2;
+        }
+
+        .part4 .grid .five {
+            grid-area: 3 / 2 / 6 /4;
+        }
+
+        .part4 .grid .eight {
+            grid-column: span 3;
+            order: -1;
+        }
+
+        /* =================================================== */
+        .part5 .grid {
+            background-color: #ddd;
+            padding: 20px;
+            width: 90%;
+            height: 400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            gap: 10px;
+            align-content: space-between;
+        }
+
+        .part5 .grid div {
+            background-color: #e91e63;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* =================================================== */
+        .part6 {}
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="part2">
+        <div class="layout">
+            <header></header>
+            <section></section>
+            <aside></aside>
+            <footer></footer>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="part3">
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part4">
+        <div class="grid">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+            <div class="seven">7</div>
+            <div class="eight">8</div>
+        </div>
+    </div>
+    <hr>
+    <div class="part5">
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="part6">
+        this part in the file Assignment_57_64_part2.html
+    </div>
+</body>
+
+</html>
