@@ -13,12 +13,14 @@
         */
         /*  
         transform Rotate values :
-        [1] Degree (deg)    => transform : rotate(360 deg) ;  => 1 Turn = 360 deg
-        [2] Radians (rad)   => transform : rotate(6.28 rad) ; => 1 Turn = 6.28 rad
-        [3] Gradians (grad) => transform : rotate(400 grad) ; => 1 Turn = 400 grad
-        [4] Turn (turn)     => transform : rotate(1 turn) ;   => 1 Turn = 1 turn
+        [1] Degree (deg)    => transform : rotate(360deg) ;  => 1 Turn = 360 deg
+        [2] Radians (rad)   => transform : rotate(6.28rad) ; => 1 Turn = 6.28 rad
+        [3] Gradians (grad) => transform : rotate(400grad) ; => 1 Turn = 400 grad
+        [4] Turn (turn)     => transform : rotate(1turn) ;   => 1 Turn = 1 turn
        ``# note : rotate take a positive and negative value , 
           if we write a positive value then the element will rotate with clockwise , and if we give the rotate negative value will rotate in opposite clockwise 
+         # imortant note: the value in rotate should be written with the measuring unit without any space between them 
+         rotate(45 deg ) => wrong | rotate(45deg) => right
         */
         div {
             margin: 200px auto;
@@ -31,10 +33,17 @@
             align-items: center;
             font-weight: bold;
             font-size: 30px;
+            transition-duration: 0.7s;
             transform: rotate(45deg);
             transform: rotate(1turn);
             transform: rotate(0.5turn);
             transform: rotate(0.25turn);
+            /* to using rotate and scale together we write them in the same line  */
+            transform: scale(1) rotate(0);
+        }
+
+        div:hover {
+            transform: scale(1.5) rotate(6.28turn);
         }
     </style>
 </head>
