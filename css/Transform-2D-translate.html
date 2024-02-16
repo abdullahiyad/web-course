@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+        /* Transform 
+        This property using for doing a changes on the element ,
+        there's methods we used i transform :
+        [1] scale() : this method not just increase the width and heigh of the element , but all thigs insdie the element will stretch
+        [2] rotate() : this method using to rotate the element 
+        [3] translate() : this method using to moving the element
+        */
+        /*  
+        # translate property using to move the element in x and y axis 
+        # translate values => transform : translate(x value , y value) ;
+        # this values can be in positive and negative , the positive value take the element to right x axis and top y axis
+           and the negative value to left x axis and bottom y axis
+        # translate values can be in px or percentage or any antoher meagure unit we used it before
+        # or you can use TranslateX() or translateY()
+        */
+        div {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255 0 0 / 39%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            transition-duration: 0.7s;
+
+        }
+
+        div:hover {
+            transform: translate(100px, 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Transform</div>
+</body>
+
+</html>

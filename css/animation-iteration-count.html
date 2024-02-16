@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 10px solid gray;
+            border-radius: 50%;
+            border-left-color: transparent;
+            /* the name of animation keyframe */
+            animation: spen-load;
+            /* here write the animation duration */
+            animation-duration: 1s;
+            /* this animation iteration count using to repeat the animation we can write a number of repeat or write infinite */
+            animation-iteration-count: infinite;
+            /*i take it before ease and ease in out */
+            animation-timing-function: linear;
+        }
+
+        @keyframes spen-load {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* animation-delay 
+        this property we take a simelar property in transition its the same property */
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 10px solid gray;
+            border-radius: 50%;
+            border-left-color: transparent;
+
+            /* the name of animation keyframe */
+            animation: spen-load;
+            /* here write the animation duration */
+            animation-duration: 1s;
+            /* this animation iteration count using to repeat the animation we can write a number of repeat or write infinite */
+            animation-iteration-count: infinite;
+            /*i take it before ease and ease in out */
+            animation-timing-function: linear;
+
+            /* animation direction 
+            this property change the direction of animation move
+            animation direction value: 
+            [1] reverse : it reflect the animation direction to opposite direction
+            [2] alternate : It makes the direction waver, sometimes true and sometimes inverse
+            [3] alternate-reverse : It makes the direction waver, sometimes true and sometimes inverse, but it start from the opposite direction to true direction
+            [4] normal : it the default value 
+        
+            */
+
+
+            /* animation-play-state */
+            /* animation play state property it control of animation run or stop */
+            /* # animation play state value :
+            [1] running : this is the default value 
+            [2] paused : this value will stopped the animation
+             */
+
+            /* short hand 
+            animation : keyframe-name  animation-duration  timing-funtion  animation-delay  iteration-count  animation-direction ; 
+            animatoin: spen-load 5s linear 0s 3 reverse ;
+            */
+
+            animation-delay: 0s;
+        }
+
+        .spen2 {
+            animation-direction: reverse;
+        }
+
+        .spen3 {
+            animation-direction: alternate;
+        }
+
+        .spen4 {
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes spen-load {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        /* source : https://www.youtube.com/watch?v=P2QAAXONOac&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=76&ab_channel=ElzeroWebSchool
+         */
+    </style>
+</head>
+
+<body>
+    true direciton
+    <div class="spen1">
+
+
+    </div>
+    reverse direction
+    <div class="spen2">
+
+    </div>
+    alternate
+    <div class="spen3">
+
+    </div>
+    alternate-reverse
+    <div class="spen4"></div>
+</body>
+
+</html>

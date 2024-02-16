@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+        /* Transform 
+        This property using for doing a changes on the element ,
+        there's methods we used i transform :
+        [1] scale() : this method not just increase the width and heigh of the element , but all thigs insdie the element will stretch
+        [2] rotate() : this method using to rotate the element 
+        [3] translate() : this method using to moving the element
+        [4] skew() : this method using to skew the element
+        [5] matrix () : this method its a short hand of all previous methods
+        */
+        /*  
+        transform : scaleX() skewY() skewX() scaleY() translateX() translateY() ;
+        */
+        div {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255 0 0 / 39%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            transition-duration: 0.7s;
+
+        }
+
+        div:hover {
+            transform: matrix(1.5, 0.268, 0, 1.5, 150, 50);
+            /* note: we cant write the unit measure with this method */
+        }
+
+        /* source : https://www.youtube.com/watch?v=OsypTHsvnVI&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=69&ab_channel=ElzeroWebSchool */
+    </style>
+</head>
+
+<body>
+    <div>Transform</div>
+</body>
+
+</html>

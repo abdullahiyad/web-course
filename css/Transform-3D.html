@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+        /* Transform 3D */
+        /* it like transform in 2d but in 3d we added a z- axis  */
+
+        /* Rotate - 3D */
+        /* transform:rotate(x , y ,z , deg value) */
+        /* x,y,z takes from 0 to 1  */
+        div {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255 0 0 / 39%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            transition-duration: 0.7s;
+            transform: rotateX(50deg);
+            transform: rotateY(50deg);
+            transform: rotateZ(50deg);
+
+        }
+
+        div:hover {
+            transform-origin: bottom center;
+            transform: rotate3d(1, 0, 0, 90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Transform</div>
+</body>
+
+</html>

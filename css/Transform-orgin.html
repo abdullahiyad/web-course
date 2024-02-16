@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+        /* transform-orgin
+        this property using to determine the center(point) of shaping
+        transform-orgin: 50% 50% ; this is the default value 
+        
+        transform orgin values :
+        transform-orgin : x-value y-value ;   or    transform-orgin : x-value y-value z-value; for 3d
+        x-value : 
+        it can be in px or em or any previous unit we take it before 
+        or can be in key words :
+        [1] left =>  left = 0%
+        [2] center => center=50%
+        [3] right => right=100%
+
+        Y-value : 
+        it can be in px or em or any previous unit we take it before 
+        or can be in key words :
+        [1] top =>  left = 0%
+        [2] center => center=50%
+        [3] bottom => right=100%
+        
+
+        
+        */
+        div {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255 0 0 / 39%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            transition-duration: 0.7s;
+            /* top left corner */
+            transform-origin: 0% 0%;
+            transform-origin: left top;
+            /* top center corner */
+            transform-origin: 50% 0%;
+            transform-origin: center top;
+            /* top right corner */
+            transform-origin: 100% 0%;
+            transform-origin: right top;
+            /* and like this we can continue for all corners */
+        }
+
+        div:hover {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Transform</div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        .part1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            z-index: -3;
+        }
+
+        .part1 div {
+            width: 300px;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #03a9f4;
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+
+        }
+
+        .part1 div::before {
+            content: "";
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            background-color: #e91e63;
+            transform: rotateZ(5deg);
+            z-index: -1;
+        }
+
+        .part1 div::after {
+            content: "";
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            background-color: #03a9f4;
+            transform: rotateZ(-5deg);
+            z-index: -1;
+        }
+
+        /* ================================== */
+        .part2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            z-index: -3;
+        }
+
+        .part2 div {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+            border-radius: 50%;
+
+        }
+
+        .part2 div::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid #e91e63;
+            border-left-color: transparent;
+            transform: rotateZ(0deg);
+        }
+
+        .part2 div::after {
+            content: "";
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid #03a9f4;
+            border-right-color: transparent;
+            transform: rotateZ(0deg);
+            z-index: -1;
+        }
+
+        /* ======================================= */
+        .part3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            z-index: -3;
+        }
+
+        .part3 div {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            position: relative;
+            border-radius: 50%;
+
+        }
+
+        .part3 div::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid #e91e63;
+            border-left-color: transparent;
+            transform: rotateZ(0deg);
+            transition-duration: 0.5s;
+
+        }
+
+        .part3 div::after {
+            content: "";
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid #03a9f4;
+            border-right-color: transparent;
+            transition-duration: 0.5s;
+            transition-delay: 0.5s;
+            z-index: -1;
+        }
+
+        .part3 div:hover::before {
+            transform: rotate(1turn);
+
+        }
+
+        .part3 div:hover::after {
+            transform: rotate(1turn);
+        }
+
+        /* ======================================= */
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div>Elzero</div>
+    </div>
+    <hr>
+    <div class="part2">
+        <div>Elzero</div>
+    </div>
+    <hr>
+    <div class="part3">
+        <div>Elzero</div>
+    </div>
+    <hr>
+</body>
+
+</html>
