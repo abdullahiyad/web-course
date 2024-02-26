@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange-color: orangered;
+            --font-color: white;
+        }
+
+        .parent-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+
+        .part1 h1 {
+            width: 150px;
+            background-color: var(--orange-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            color: var(--font-color);
+        }
+
+        .part1 h1::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: var(--orange-color);
+            z-index: -1;
+            transform: skew(10deg, 10deg);
+
+        }
+
+        .part1 h1::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: var(--orange-color);
+            z-index: -1;
+            transform: skew(-10deg, -10deg);
+        }
+
+        /* ===================================== */
+        .part2 h1 {
+            width: 150px;
+            height: 75px;
+            background-color: #009683;
+            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .part2 h1::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #009683;
+            z-index: -1;
+            transform: translateX(-15px) skewx(20deg);
+        }
+
+        .part2 h1::after {
+            content: "";
+            width: 15%;
+            height: 100%;
+            position: absolute;
+            background-color: #009683;
+            z-index: -1;
+            transform: translateX(-108px) skewx(20deg);
+        }
+
+        /* =================================================== */
+        /* part3 
+        .class {
+         matrix(3, 0.2679, 0, 3, 20, 100);
+        }
+        scaleX : 3 
+        skewY: 0.2697
+        skewX : 0
+        scaleY: 3
+        translateX : 20
+        translateY : 100
+        */
+
+        /* ============================= */
+        .part4 {
+            height: 500px;
+
+        }
+
+        .part4 div {
+            width: 200px;
+            height: 200px;
+            background-color: #607d8b;
+            border-bottom: 5px solid black;
+            position: relative;
+        }
+
+        .part4 div::before {
+            content: "Elzero";
+            position: absolute;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            bottom: 0;
+            left: 10px;
+        }
+
+        .part4 div::after {
+            content: "";
+            width: 69%;
+            height: 69%;
+            background-color: black;
+            position: absolute;
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            transform: rotate(-45deg);
+            left: 14%;
+            top: -36%;
+        }
+
+        /* ========================================================== */
+        .part5 div {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transition-duration: 1s;
+            perspective: 500px;
+        }
+
+        .part5 div::before,
+        .part5 div::after {
+            content: "Back";
+            background-color: #333;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(0deg);
+            transition-duration: 1s;
+        }
+
+        .part5 div::before {
+            background-color: red;
+            transform: rotateY(180deg);
+        }
+
+        .part5 div::after {
+            content: "front";
+            transform: rotateY(0deg);
+            backface-visibility: hidden;
+        }
+
+        .part5 div:hover::after {
+            transform: rotateY(180deg);
+        }
+
+        .part5 div:hover::before {
+            transform: rotateY(360deg);
+        }
+
+        /* ========================================== */
+        /* ========================================================== */
+        .part6 div {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transition-duration: 1s;
+            perspective: 500px;
+        }
+
+        .part6 div::before,
+        .part6 div::after {
+            content: "Back";
+            background-color: #333;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateX(0deg);
+            transition-duration: 1s;
+        }
+
+        .part6 div::before {
+            background-color: red;
+            transform: rotateX(180deg);
+        }
+
+        .part6 div::after {
+            content: "front";
+            transform: rotateY(0deg);
+            backface-visibility: hidden;
+        }
+
+        .part6 div:hover::after {
+            transform: rotateX(180deg);
+        }
+
+        .part6 div:hover::before {
+            transform: rotateX(360deg);
+        }
+
+        /* ========================================== */
+    </style>
+</head>
+
+<body>
+    <div class="part1 parent-center ">
+        <h1>Elzero</h1>
+    </div>
+    <hr>
+    <div class="part2 parent-center ">
+        <h1>Elzero</h1>
+    </div>
+    <hr>
+    <div class="part4 parent-center">
+        <div></div>
+    </div>
+    <hr>
+    <div class="part5 parent-center">
+        <div></div>
+    </div>
+    <hr>
+    <div class="part6 parent-center">
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .part1 {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .part1>div {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid purple;
+            border-right-color: transparent;
+            position: relative;
+            animation-name: trnasition-loop;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .part1>div::before {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            border: 10px solid blue;
+            border-left-color: transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .part1 div::after {
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            border: 10px solid gold;
+            border-top-color: transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .part1 div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes trnasition-loop {
+
+            to {
+                transform: rotateZ(1turn);
+            }
+        }
+
+        /* ================================================= */
+        .part2 {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .part2>div {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid purple;
+            border-left-color: transparent;
+            position: relative;
+            animation-name: spin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: paused
+        }
+
+        .part2>div::before {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            border: 10px solid blue;
+            border-left-color: transparent;
+            top: -25px;
+            left: -25px;
+            animation-name: spin;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+        }
+
+        .part2 div::after {
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            border: 10px solid;
+            border-left-color: transparent;
+            top: -40px;
+            left: -40px;
+            animation-duration: 2s;
+            animation-play-state: paused
+        }
+
+        .part2 div:hover {
+            animation-play-state: running;
+        }
+
+        .part2 div:hover::before {
+            animation-play-state: running;
+        }
+
+        .part2 div:hover::after {
+            animation-play-state: running;
+        }
+
+        @keyframes spin {
+
+            to {
+                transform: rotateZ(1turn);
+            }
+        }
+
+        /* ====================================== */
+        .part3 {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part3 span {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 50%;
+            border: 10px solid black;
+            border-left-color: transparent;
+            animation-name: spin-reverse;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes spin-reverse {
+            to {
+                transform: rotateZ(1turn);
+            }
+
+        }
+
+        /*================================== */
+        .part4 {
+
+            display: flex;
+            width: 100%;
+            height: 700px;
+            justify-content: center;
+            column-gap: 20px;
+            align-items: center;
+            background-color: #ddd;
+            position: relative;
+
+        }
+
+        .l,
+        .e {
+            display: grid;
+            grid-template-rows: repeat(7, 50px);
+            grid-template-columns: repeat(4, 50px);
+            position: relative;
+        }
+
+        .e *,
+        .l * {
+            background-color: #333;
+            color: white;
+        }
+
+
+        .e1 {
+            grid-area: 1/1/2/span 4;
+        }
+
+        .e2 {
+            grid-area: 2/1/span 2/2;
+        }
+
+        .e3 {
+            grid-area: 4/1/5/ span 4;
+        }
+
+        .e4 {
+            grid-area: 5/1/span 2/2;
+        }
+
+        .e5 {
+            grid-area: 7/1/8/span 4;
+        }
+
+        .e::before {
+            content: "";
+            position: absolute;
+            background-color: gold;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+            top: 1.4%;
+            right: 2%;
+            animation-name: letter-e;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-timing-function: ease-in;
+
+        }
+
+        @keyframes letter-e {
+            11% {
+                transform: translateX(-150px);
+            }
+
+            22% {
+                transform: translate(-150px, 150px);
+            }
+
+            33% {
+                transform: translate(0px, 150px);
+            }
+
+            44% {
+                transform: translate(-150px, 150px);
+            }
+
+            55% {
+                transform: translate(-150px, 300px);
+            }
+
+            66% {
+                transform: translate(0px, 300px);
+            }
+
+            77% {
+                transform: translate(-150px, 300px);
+            }
+
+            88% {
+                transform: translateX(-150px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        .l1 {
+            grid-area: 1/1/span 6/2;
+        }
+
+        .l2 {
+            grid-area: 7/1/8/span 4;
+        }
+
+        .l::before {
+            content: "";
+            position: absolute;
+            background-color: gold;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+            bottom: 1.4%;
+            right: 2%;
+            opacity: 0%;
+            animation-name: letter-l;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes letter-l {
+            0% {
+                opacity: 100%;
+            }
+
+            30% {
+                transform: translateX(-376%);
+            }
+
+            80% {
+                opacity: 100%;
+                transform: translate(-376%, -750%);
+            }
+
+            100% {
+                transform: translate(-376%, -750%);
+                opacity: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div></div>
+    </div>
+    <hr>
+    <div class="part2">
+        <div></div>
+    </div>
+    <hr>
+    <div class="part3">
+        <span></span>
+    </div>
+
+    <hr>
+    <div class="part4">
+        <div class="e">
+            <div class="e1"></div>
+            <div class="e2"></div>
+            <div class="e3"></div>
+            <div class="e4"></div>
+            <div class="e5"></div>
+
+        </div>
+        <div class="l">
+            <div class="l1"></div>
+            <div class="l2"></div>
+        </div>
+
+    </div>
+    <hr>
+</body>
+
+</html>

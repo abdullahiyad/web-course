@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /*CSS selectors*/
+        /* 
+        -in css there's to access the elements in css
+        # using element type : p{} body{ } div{}
+        # using class : we give the element class and call it in css : .parent{} .child{}
+        # using id : we give the element id and call it in css : #parent{} #child{} 
+        # using elemnts then another element(nasted path) : [ div .child{} ]  [#parent p{}  ]  
+        */
+        p {
+            /* this css propertys will applied on all paragraph elements */
+        }
+
+        .test {
+            /* this css propertys will aplied on all elements that have class named test */
+        }
+
+        p.test {
+            /* this css propertys will aplied on all paragraphes that have class named test */
+        }
+
+        .test p {
+            /* this css propertys will aplied on all paragraph elements inside elements have class named test */
+        }
+
+        .parent .child {
+            /* this css propertys will aplied on all elements that have class named child inside elemetns that have class named parent
+             , and maybe child not direct inside the parent maybe he is indide nasted elements */
+        }
+
+        .parent>.child {
+            /* this css propertys will aplied on all elements that have class named child inside elemetns that have class named parent directly
+             , that mean the child can not be nasted inside another elements nither of parent */
+        }
+    </style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

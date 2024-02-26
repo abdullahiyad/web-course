@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="phone-size.css" media="(max-width:800px) and (min-width:600px)">
+    <!-- we can write the css propertys that we written down , we can write it in external file and we can put the condition in media attribute
+    and they doing the same thing -->
+    <style>
+        .parent {
+            background-color: #ddd;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .parent>div {
+            background-color: red;
+            width: 140px;
+            color: white;
+            text-align: center;
+        }
+
+        /* how to use media queries :
+        @media condition {
+            block code
+        }
+        
+        */
+        @media (max-width: 800px) {
+
+            /* هذا الشرط يعني انه العرض اذا كان 1000بكسل فما تحت سوف تطبق هذه الخصائص */
+            .parent>div {
+                background-color: blue;
+            }
+        }
+
+        @media (max-width:800px) and (min-width:600px) {
+            .parent>div {
+                background-color: blue;
+            }
+        }
+
+        /* these numbers like 800px and 600px its a random number i write it ,
+        but in front-end program theres a standered size we use it  */
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+</body>
+
+</html>

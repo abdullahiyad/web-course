@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        p:first-child {
+            /* this css propertys will aplied on every child from type paragraph element , and the paragraph should be the first child for his parent -- */
+            /* that mean we have 2 conditions : 
+            [1] the elements should be <p> type 
+            [2] the element should be first child for his parent */
+        }
+
+        p:last-child {
+            /* this css propertys will aplied on every child from type paragraph element , and the paragraph should be the last child for his parent -- */
+            /* 
+            [1] the elements should be <p> type 
+            [2] the element should be last child for his parent */
+        }
+
+        p:first-of-type {
+            /* this css propertys will aplied on every  first one of type child from type paragraph element , and the paragraph should be the first of type child for his parent -- */
+            /* 
+            [1] the elements should be first one of type  <p>  
+            [2] the element should be  child for his parent */
+        }
+
+        p:last-of-type {
+            /* this css propertys will aplied on every  last one of type child from type paragraph element , and the paragraph should be the last of type child for his parent -- */
+            /* 
+            [1] the elements should be last one of type  <p>  
+            [2] the element should be  child for his parent */
+        }
+
+        p:only-of-type {
+            /* this css propertys will aplied on every  only one of type child from type paragraph element , and the paragraph should be lonly child from type <P> for his parent -- */
+            /* 
+            [1] the elements should be only one of type  <p>  
+            [2] the element should be  child for his parent */
+        }
+
+        p:only-child {
+            /* this css propertys will aplied on every  child from type paragraph element lonly , the paragraph should be lonly child for his parent(no another elements child with him inside parent) -- */
+            /* 
+            [1] the elements should be type  <p>  
+            [2] the element should be lonly child for his parent */
+        }
+
+        p:not() {
+            /* this not used to access the elements that not have that special condition */
+            /* its doing the opposite of the previous selectors */
+        }
+
+        p:not(:only-child) {
+            /* this css propertys will aplied on every  child from type paragraph element noy lonly , the paragraph should be  not lonly child for his parent(theres another elements child with him inside parent) -- */
+        }
+
+        p:nth-child() {
+            /* this css propertys will aplied on every child have the  same number */
+        }
+
+        p:nth-child(2) {
+            /* this css propertys will aplied on every child his ranked is 2 */
+        }
+
+        p:nth-child(3) {
+            /* this css propertys will aplied on every child paragraph his ranked is 3 */
+        }
+
+        :nth-child(odd) {
+            /* this css propertys will aplied on every child his ranked is odd number*/
+        }
+
+        p:nth-child(even) {
+            /* this css propertys will aplied on every child his ranked is even number*/
+        }
+
+        input[type="text"]:disabled {
+            background-color: red;
+            /* this css propertys will aplied on every input field that have attribute type text and disapled */
+        }
+
+        div:empty {
+            /* this css propertys will aplied on every div element empty  */
+        }
+
+        /*use this site for more : https://nthmaster.ru/ */
+        ::selection {
+            /* this css propertys will aplied on the selection text */
+        }
+
+        ::placeholder {
+            /* this css propertys will aplied on placeholder */
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        div+p {
+            /* this css propertys will aplied on every paragraph that had directly before it div element
+            its mean after the div elements directly will the paragraph element comming */
+        }
+
+        p~div {
+            /* this css propertys will aplied on every div will cumming after the paragraph elements and should be siblings , 
+            siblings mean all of it in the same line inside the same father  */
+        }
+
+        [title] {
+            /* this propertys will aplied on every element have the attribute "title" */
+        }
+
+        div[title] {
+            /* this css propertys will aplied on every div that have the title attribute */
+        }
+
+        [title="test"] {
+            /* this css propertys will aplied on every element have the title attribute and the title attribute value should be "test" */
+        }
+
+        div[title="test"] {
+            /* this css propertys will aplied on every div element have the title attribute and the title attribute value should be "test" */
+        }
+
+        [title~="test"] {
+            /* this css propertys will aplied on every element have the title attribute and the title attribute value should be contain "test" word alone 
+            , alone mean its a indepenednt word not a sub of another word like "firsttest" */
+        }
+
+        div[title~="test"] {
+            /* this css propertys will aplied on every div element have the title attribute and the title attribute value should be contain "test" word alone 
+            , alone mean its a indepenednt word not a sub of another word like "firsttest" */
+        }
+
+        [title*="test"] {
+            /* this css propertys will aplied on every element have the title attribute and the title attribute value should 
+            be contain "test" word  , its not indepenednt word so if it a sub of another word like "firsttest" its okey he will take it because he take it as a string */
+        }
+
+        div[title*="test"] {
+            /* this css propertys will aplied on every div element have the title attribute and the title attribute value should 
+            be contain "test" word  , its not indepenednt word so if it a sub of another word like "firsttest" its okey he will take it  */
+        }
+
+        [title^="test"] {
+            /* this css propertys will aplied on every element have the title attribute and the title attribute value should start with "test" string */
+        }
+
+        div[title^="test"] {
+            /* this css propertys will aplied on every div element have the title attribute and the title attribute value should start with "test" string */
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
